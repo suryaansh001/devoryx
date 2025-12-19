@@ -5,6 +5,7 @@ import Aurora from "@/components/Aurora"
 import { FeaturesSection } from "@/components/features-section"
 import { AITeamSection } from "@/components/ai-team-section"
 import { TrainingSection } from "@/components/training-section"
+import { TechStackShowcase } from "@/components/tech-stack-showcase"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
@@ -22,6 +23,7 @@ export default function HomePage() {
           <FeaturesSection />
           <AITeamSection />
           <TrainingSection />
+          <TechStackShowcase />
           <CTASection />
           <Footer />
         </div>

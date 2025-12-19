@@ -430,9 +430,10 @@ export function FeaturesSection() {
   }, [])
 
   return (
-    <section id="features" ref={sectionRef} className="relative z-10">
-      <div className="rounded-t-[3rem] pt-16 sm:pt-24 pb-16 sm:pb-24 px-4 relative overflow-hidden" style={{ background: 'transparent' }}>
-        <div className="max-w-7xl mx-auto relative">
+    <section id="features" ref={sectionRef} className="relative z-10 py-16 sm:py-24 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Main Card Container */}
+        <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-8 sm:p-12 md:p-16">
           <div
             className={`text-center mb-12 sm:mb-20 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"

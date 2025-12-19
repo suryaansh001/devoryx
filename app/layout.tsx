@@ -1,9 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Suspense } from "react"
 import "./globals.css"
-import { PageTransition } from "@/components/page-transition"
-import { NavigationTransition } from "@/components/navigation-transition"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Dancing_Script, Caveat } from "next/font/google"
 
@@ -23,7 +20,7 @@ export const metadata: Metadata = {
   title: "Devoryx - Engineering Digital Systems That Work",
   description:
     "Devoryx builds digital products, automation systems, and intelligent workflows designed for real business needs — with a strong focus on clarity, execution, and scalability.",
-  generator: "v0.app",
+  generator: "suryaansh.app",
   icons: {
     icon: "/images/logo.ico",
   },
@@ -37,10 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`font-sans antialiased ${dancingScript.variable} ${caveat.variable}`}>
-        <Suspense fallback={null}>
-          <NavigationTransition />
-          <PageTransition>{children}</PageTransition>
-        </Suspense>
+        {children}
         <SpeedInsights />
       </body>
     </html>

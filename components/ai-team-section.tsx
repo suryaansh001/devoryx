@@ -182,9 +182,9 @@ export function AITeamSection() {
   }, [currentConversation])
 
   return (
-    <section id="ai-team" ref={sectionRef} className="relative z-10">
-      <div className="rounded-b-[3rem] pt-16 sm:pt-24 pb-16 sm:pb-24 px-4 relative overflow-hidden" style={{ background: 'transparent' }}>
-        <div className="container mx-auto px-4 relative z-10 border border-white/20 rounded-2xl p-8 sm:p-12" style={{ background: 'rgba(0, 0, 0, 0.3)' }}>
+    <section id="ai-team" ref={sectionRef} className="relative z-10 py-16 sm:py-24 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="relative z-10 bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-8 sm:p-12 md:p-16">
           <div className="text-center mb-16">
             <div
               className={`inline-flex items-center gap-2 bg-slate-50 border border-slate-200 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6 transition-all duration-1000 ${
