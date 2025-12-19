@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import { BookOpen, Code, Users, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import SpotlightCard from "@/components/SpotlightCard"
+import Aurora from "@/components/Aurora"
+import { GlassmorphismNav } from "@/components/glassmorphism-nav"
+import { Footer } from "@/components/footer"
 
 export default function TrainingPage() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -64,7 +67,13 @@ export default function TrainingPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-black overflow-hidden">
+      <main className="min-h-screen relative overflow-hidden">
+        <div className="fixed inset-0 w-full h-full">
+          <Aurora colorStops={["#475569", "#64748b", "#475569"]} amplitude={1.2} blend={0.6} speed={0.8} />
+        </div>
+        <div className="relative z-10">
+          <GlassmorphismNav />
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
@@ -143,12 +152,15 @@ export default function TrainingPage() {
             <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
               Contact us to discuss custom training programs tailored to your needs.
             </p>
-            <Button className="bg-white text-black rounded-full px-8 py-3 text-lg font-medium hover:bg-gray-100">
+            <a href="/contact" className="inline-block bg-white text-black rounded-full px-8 py-3 text-lg font-medium hover:bg-gray-100 transition-colors">
               Enquire About Training
-            </Button>
+            </a>
           </div>
         </div>
       </section>
-    </main>
+        <Footer />
+        </div>
+      </main>
+    </div>
   )
 }

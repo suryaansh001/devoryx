@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import { MessageCircle, Zap, CheckCircle, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import SpotlightCard from "@/components/SpotlightCard"
+import Aurora from "@/components/Aurora"
+import { GlassmorphismNav } from "@/components/glassmorphism-nav"
+import { Footer } from "@/components/footer"
 
 export default function AIAutomationPage() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -60,7 +63,13 @@ export default function AIAutomationPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-black overflow-hidden">
+      <main className="min-h-screen relative overflow-hidden">
+        <div className="fixed inset-0 w-full h-full">
+          <Aurora colorStops={["#475569", "#64748b", "#475569"]} amplitude={1.2} blend={0.6} speed={0.8} />
+        </div>
+        <div className="relative z-10">
+          <GlassmorphismNav />
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
@@ -146,12 +155,15 @@ export default function AIAutomationPage() {
             <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how automation can streamline your operations and reduce manual effort.
             </p>
-            <Button className="bg-white text-black rounded-full px-8 py-3 text-lg font-medium hover:bg-gray-100">
+            <a href="/contact" className="inline-block bg-white text-black rounded-full px-8 py-3 text-lg font-medium hover:bg-gray-100 transition-colors">
               Discuss an Automation Use Case
-            </Button>
+            </a>
           </div>
         </div>
       </section>
-    </main>
+        <Footer />
+        </div>
+      </main>
+    </div>
   )
 }

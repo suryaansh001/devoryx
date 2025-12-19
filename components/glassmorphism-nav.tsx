@@ -96,19 +96,19 @@ export function GlassmorphismNav() {
       >
         {/* Main Navigation */}
         <div className="w-[90vw] max-w-xs md:max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-3 md:px-6 md:py-2">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/40 rounded-full px-4 py-3 md:px-6 md:py-2">
             <div className="flex items-center justify-between">
               {/* Logo */}
               <Link
                 href="/"
                 className="flex items-center hover:scale-105 transition-transform duration-200 cursor-pointer"
               >
-                <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
                   <Image
                     src="/images/cliste-logo.png"
                     alt="Devoryx"
-                    width={40}
-                    height={40}
+                    width={90}
+                    height={90}
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -190,7 +190,7 @@ export function GlassmorphismNav() {
               isOpen ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-8 scale-95 pointer-events-none"
             }`}
           >
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/40 rounded-2xl p-4 shadow-2xl">
               <div className="flex flex-col space-y-1">
                 {navigation.map((item, index) =>
                   item.href.startsWith("/") && !item.href.startsWith("/#") ? (

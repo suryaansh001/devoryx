@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   description:
     "Devoryx builds digital products, automation systems, and intelligent workflows designed for real business needs — with a strong focus on clarity, execution, and scalability.",
   generator: "v0.app",
+  icons: {
+    icon: "/images/logo.ico",
+  },
 }
 
 export default function RootLayout({
