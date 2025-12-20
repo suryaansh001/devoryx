@@ -1,0 +1,127 @@
+================================================================================
+DEVORYX - HOME PAGE CONTENT
+================================================================================
+
+HERO SECTION
+================================================================================
+
+Badge: devoryx.xyz
+
+Main Heading: 
+"Skills, Systems, and Automation — Built with Clarity."
+
+Subheading:
+"Devoryx delivers practical technology training, AI-driven automation, and 
+dependable digital systems for individuals, institutions, and businesses."
+
+Call-to-Action Buttons:
+1. "Start a Project"
+2. "Explore Our Capabilities"
+
+Trust Indicators (Scrolling):
+- Web Development
+- Mobile Apps
+- AI Automation
+- Training
+- Digital Marketing
+- Custom Systems
+
+
+PROBLEM SOLUTION SECTION
+================================================================================
+
+Section Tag: "A Practical Technology Partner"
+
+Section Heading:
+"Building Systems Meant to Be Used"
+
+Section Description:
+"Devoryx is a focused technology team delivering websites, applications, 
+automation, and training with a clear emphasis on well-defined scope and 
+reliable execution. We build systems meant to be used, scaled, and maintained 
+— not just showcased."
+
+
+FEATURES SECTION
+================================================================================
+
+Key Focus Areas:
+1. Website-based AI Chatbots
+   - 24/7 automated customer engagement and lead capture systems
+
+2. Workflow Automation
+   - Streamline repetitive processes and connect systems seamlessly
+
+3. Lead Generation & Verification
+   - Automated capture, validation, and qualification systems
+
+4. Custom Training Programs
+   - Practical skills for students, professionals, and teams
+
+5. Web Development
+   - Modern, responsive websites with clean code
+
+6. Mobile & Custom Applications
+   - Native and cross-platform solutions
+
+
+AI TEAM SECTION
+================================================================================
+
+Focus: How AI and Automation integrate into business operations
+
+
+TRAINING SECTION
+================================================================================
+
+Emphasis: Hands-on learning focused on real-world application
+
+
+TECH STACK SHOWCASE
+================================================================================
+
+Technologies and tools used in projects
+
+
+CTA SECTION
+================================================================================
+
+Call-to-action encouraging users to start their project
+
+
+FOOTER
+================================================================================
+
+Company information, links, and contact details
+
+
+================================================================================
+IMAGE GENERATION SUGGESTIONS:
+================================================================================
+
+1. HERO SECTION IMAGE
+   - Professional, modern tech-focused imagery
+   - Dark theme with blue/purple accents
+   - Could show: People collaborating, code, digital systems, AI concepts
+
+2. AUTOMATION IMAGE
+   - Visualize workflow automation
+   - Connected nodes, data flow, processes being automated
+   - Dashboard or automation interface
+
+3. TRAINING IMAGE
+   - People learning, collaborative sessions
+   - Laptops, whiteboards, hands-on development
+   - Educational environment
+
+4. DEVELOPMENT IMAGE
+   - Clean code, modern design systems
+   - Responsive design mockups
+   - Developer workspace
+
+5. SOLUTIONS IMAGE
+   - Before/After comparison
+   - Problem → Solution flow
+   - Impact visualization
+
+================================================================================

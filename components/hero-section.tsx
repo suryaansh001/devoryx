@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import RotatingText from "./RotatingText"
+import Image from "next/image"
 
 const ArrowRight = () => (
   <svg
@@ -51,22 +52,19 @@ export function HeroSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-16 animate-fade-in-buttons">
-          <Button
-            size="lg"
-            className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer relative overflow-hidden"
+          <a href="/development"
+            className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer relative overflow-hidden inline-flex items-center"
           >
             Start a Project
             <ArrowRight />
-          </Button>
+          </a>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="rounded-full px-8 py-4 text-lg font-medium border-border hover:bg-accent transition-all duration-200 hover:scale-105 group bg-transparent cursor-pointer"
+          <a href="/services"
+            className="rounded-full px-8 py-4 text-lg font-medium border border-white hover:bg-white/10 transition-all duration-200 hover:scale-105 group bg-transparent cursor-pointer inline-flex items-center text-white"
           >
             <Play />
             Explore Our Capabilities
-          </Button>
+          </a>
         </div>
 
         {/* Trust Indicators */}
@@ -123,6 +121,18 @@ export function HeroSection() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Hero Image */}
+        <div className="mt-16 relative z-10 animate-fade-in-hero">
+          <Image
+            src="/images/HomePage.png"
+            alt="Devoryx Services"
+            width={700}
+            height={400}
+            className="w-full max-w-2xl mx-auto rounded-2xl shadow-2xl"
+            priority
+          />
         </div>
       </div>
     </section>

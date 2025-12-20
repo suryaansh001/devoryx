@@ -1,0 +1,185 @@
+================================================================================
+DEVORYX - ADDITIONAL SERVICES PAGE CONTENT
+================================================================================
+
+PAGE HEADING
+================================================================================
+
+Main Title: "Additional Services"
+
+Subtitle: "Supporting services to complement your core projects."
+
+
+BEYOND CORE FOCUS SECTION
+================================================================================
+
+Section Heading: "Beyond Our Core Focus"
+
+Description:
+"Alongside our core focus areas — Training, AI & Automation, and Development — 
+we provide supporting services as required to complete project objectives."
+
+
+ADDITIONAL SERVICES
+================================================================================
+
+1. Digital Marketing
+   Icon: Megaphone
+   Description: "Social media management, SEO setup, and paid ad execution 
+   (client-funded). We handle the technical aspects while you focus on your 
+   core business."
+
+2. Billing Software (Open-Source)
+   Icon: DollarSign
+   Description: "Setup, customization, and training for open-source billing 
+   and invoicing tools. Get your invoicing system running efficiently with our 
+   support."
+
+
+CTA SECTION
+================================================================================
+
+Heading: "Need Support?"
+
+Description: "Let's discuss how our additional services can support your 
+project goals."
+
+Button: "Get in Touch" → Links to /contact
+
+
+DIGITAL MARKETING SERVICES
+================================================================================
+
+Capabilities:
+- Social media strategy and management
+- SEO optimization and setup
+- Paid advertising campaigns (Google Ads, Meta Ads)
+- Content calendar and posting
+- Analytics tracking and reporting
+- Technical SEO implementation
+- Conversion rate optimization
+
+Client-Funded:
+- Ad spend is managed by the client
+- Devoryx handles setup and optimization
+- Regular reporting and adjustments
+- Performance tracking
+
+Benefits:
+- Increase online visibility
+- Drive qualified traffic
+- Engage your audience
+- Measurable ROI
+- Professional management
+
+
+BILLING SOFTWARE SERVICES
+================================================================================
+
+Open-Source Solutions Supported:
+- Invoicing and billing systems
+- Subscription management
+- Invoice automation
+- Payment processing
+- Reporting and analytics
+
+Our Services Include:
+- Software setup and configuration
+- Customization to your needs
+- Database setup
+- Integration with payment providers
+- User training and documentation
+- Ongoing support and maintenance
+- Custom feature development (if needed)
+
+Benefits:
+- Reduce billing administrative work
+- Automated invoice generation
+- Recurring payment management
+- Professional invoicing
+- Cost-effective solution
+- Full ownership of your data
+
+
+SUPPORTING ROLE
+================================================================================
+
+Core Services vs. Supporting Services:
+
+Core Services (Primary Focus):
+- Training & Workshops
+- AI & Automation Solutions
+- Web & Mobile Development
+
+Supporting Services (Project Completion):
+- Digital Marketing (to promote your product/service)
+- Billing Software (to manage your operations)
+- Custom integrations
+- Technical consulting
+
+We provide these services to ensure your projects are complete and fully 
+functional, not as our primary business offering.
+
+
+================================================================================
+IMAGE GENERATION SUGGESTIONS:
+================================================================================
+
+1. HERO IMAGE
+   - Support and services visualization
+   - Multiple service types
+   - Team working together
+   - Comprehensive solution display
+
+2. DIGITAL MARKETING IMAGE
+   - Social media strategy
+   - Analytics dashboard
+   - Marketing campaigns
+   - Social media icons
+   - Growth charts
+   - Targeted advertising visualization
+
+3. SEO & ONLINE PRESENCE IMAGE
+   - Website optimization
+   - Search engine rankings
+   - Traffic analytics
+   - Keyword strategy
+   - Online visibility
+
+4. PAID ADVERTISING IMAGE
+   - Ad campaigns in progress
+   - Google Ads interface
+   - Meta Ads dashboard
+   - Ad performance metrics
+   - Campaign targeting
+
+5. BILLING SYSTEM IMAGE
+   - Invoice template
+   - Billing dashboard
+   - Payment processing
+   - Transaction history
+   - Financial management
+   - Chart showing revenue
+
+6. INVOICING SOFTWARE IMAGE
+   - Invoice creation interface
+   - Subscription management
+   - Payment received notification
+   - Financial reports
+   - Automated billing
+
+7. INTEGRATION IMAGE
+   - Systems connected
+   - API connections
+   - Data flow
+   - Multiple tools working together
+   - Workflow integration
+
+8. SUPPORT IMAGE
+   - Team providing support
+   - Technical assistance
+   - Training session
+   - Documentation
+   - Customer service
+
+================================================================================

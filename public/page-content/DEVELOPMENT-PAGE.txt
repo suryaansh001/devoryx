@@ -1,0 +1,197 @@
+================================================================================
+DEVORYX - DEVELOPMENT SERVICES PAGE CONTENT
+================================================================================
+
+PAGE HEADING
+================================================================================
+
+Main Title: "Development Services"
+
+Subtitle: "Digital systems built for reliability and long-term use."
+
+
+ABOUT DEVELOPMENT SECTION
+================================================================================
+
+Section Heading: "About Our Development"
+
+Description:
+"We build websites, mobile applications, and custom web systems with a focus on 
+performance, maintainability, and usability. Every project is scoped clearly 
+before execution."
+
+
+DEVELOPMENT SERVICES
+================================================================================
+
+1. Website Development
+   Icon: Code
+   Description: "Modern, responsive websites built with clean code and best 
+   practices."
+
+2. Mobile App Development
+   Icon: Smartphone
+   Description: "Native and cross-platform mobile applications for iOS and 
+   Android."
+
+3. Custom Web Systems
+   Icon: Zap
+   Description: "Tailored web applications designed for your specific business 
+   needs."
+
+4. Internal Dashboards & Tools
+   Icon: LayoutDashboard
+   Description: "Purpose-built tools for data visualization, reporting, and 
+   operations."
+
+
+OUR PRINCIPLES
+================================================================================
+
+Development Methodology:
+1. Clear requirements and scope
+2. Clean architecture and codebase
+3. Scalable foundations for growth
+4. Practical feature sets focused on value
+
+
+CTA SECTION
+================================================================================
+
+Heading: "Ready to Build?"
+
+Description: "Let's discuss your project requirements and create a development 
+plan tailored to your needs."
+
+Button: "Discuss a Development Project" → Links to /contact
+
+
+KEY FEATURES OF OUR DEVELOPMENT
+================================================================================
+
+Websites:
+- Responsive design for all devices
+- Fast loading performance
+- SEO-friendly architecture
+- Modern design systems
+- Accessibility standards
+- Security best practices
+
+Mobile Apps:
+- Native iOS and Android development
+- Cross-platform solutions
+- App store ready
+- Offline functionality
+- Push notifications
+- Smooth user experience
+
+Custom Web Systems:
+- Tailored to business requirements
+- Scalable architecture
+- Integration with existing systems
+- Custom workflows
+- Database design
+- API development
+
+Dashboards & Tools:
+- Real-time data visualization
+- Custom reporting
+- User-friendly interfaces
+- Analytics integration
+- Performance monitoring
+- Team collaboration features
+
+
+TECHNOLOGY STACK
+================================================================================
+
+Frontend:
+- React, Next.js
+- TypeScript
+- Tailwind CSS
+- Modern JavaScript
+
+Backend:
+- Node.js
+- Python
+- Database management (SQL, NoSQL)
+- RESTful APIs
+
+Mobile:
+- React Native
+- Flutter (if applicable)
+- Native development
+
+
+DEVELOPMENT PROCESS
+================================================================================
+
+1. Requirements gathering and scoping
+2. Architecture and design planning
+3. Clean code implementation
+4. Testing and quality assurance
+5. Deployment and launch
+6. Ongoing support and maintenance
+
+
+================================================================================
+IMAGE GENERATION SUGGESTIONS:
+================================================================================
+
+1. HERO IMAGE
+   - Modern website design on screen
+   - Developer workspace
+   - Clean, professional interface
+   - Tech-focused aesthetic
+   - Product showcase
+
+2. WEBSITE DEVELOPMENT IMAGE
+   - Responsive design mockups
+   - Multiple device displays (desktop, tablet, mobile)
+   - Modern UI design
+   - Website in development
+   - Design system visualization
+
+3. MOBILE APP IMAGE
+   - Smartphone showing app interface
+   - iOS and Android versions
+   - App store presentation
+   - User interaction demonstration
+   - Mobile-first design
+
+4. CUSTOM WEB SYSTEMS IMAGE
+   - Complex web application interface
+   - Dashboard with data
+   - Business logic visualization
+   - System architecture diagram
+   - Enterprise solution
+
+5. INTERNAL DASHBOARDS IMAGE
+   - Analytics dashboard
+   - Real-time data visualization
+   - Charts, graphs, metrics
+   - Team monitoring tool
+   - Business intelligence display
+
+6. DEVELOPMENT PROCESS IMAGE
+   - Code on screen (IDE/editor)
+   - Git workflow
+   - Team collaboration
+   - Code review process
+   - Clean architecture diagram
+
+7. SCALABILITY IMAGE
+   - Growth visualization
+   - System scaling in action
+   - Infrastructure diagram
+   - Performance metrics
+   - Reliability indicators
+
+8. PRINCIPLES IMAGE
+   - Clear documentation
+   - Architecture diagrams
+   - Code quality visualization
+   - Performance optimization
+   - Team collaboration
+
+================================================================================

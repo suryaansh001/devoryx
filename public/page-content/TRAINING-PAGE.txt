@@ -1,0 +1,131 @@
+================================================================================
+DEVORYX - TRAINING & WORKSHOPS PAGE CONTENT
+================================================================================
+
+PAGE HEADING
+================================================================================
+
+Main Title: "Training & Workshops"
+
+Subtitle: "Hands-on learning focused on real-world application."
+
+
+ABOUT TRAINING SECTION
+================================================================================
+
+Section Heading: "About Our Training"
+
+Description:
+"Training is a core focus at Devoryx. Our programs are designed for students, 
+professionals, and teams who want practical skills that translate directly 
+into real projects and work environments."
+
+
+TRAINING AREAS
+================================================================================
+
+1. Web Development
+   Icon: Code
+   Description: "Modern web technologies and frameworks for building responsive 
+   applications."
+
+2. Backend & API Development
+   Icon: BookOpen
+   Description: "Server-side development, database design, and RESTful API 
+   architecture."
+
+3. AI & Automation Basics
+   Icon: Award
+   Description: "Introduction to AI integration and workflow automation 
+   fundamentals."
+
+4. College & Corporate Workshops
+   Icon: Users
+   Description: "Custom training programs tailored to institutions and team 
+   requirements."
+
+
+OUR APPROACH
+================================================================================
+
+Training Methodology:
+1. Practical, hands-on sessions
+2. Clear explanations and guided problem-solving
+3. Focus on fundamentals and real use cases
+4. Suitable for beginners and intermediate learners
+
+
+CTA SECTION
+================================================================================
+
+Heading: "Ready to Upskill?"
+
+Description: "Contact us to discuss custom training programs tailored to your 
+needs."
+
+Button: "Enquire About Training" → Links to /contact
+
+
+KEY MESSAGING
+================================================================================
+
+Core Values:
+- Hands-on practical learning
+- Real-world applications
+- Clear guidance for all skill levels
+- Customizable programs for institutions and teams
+- Focus on fundamentals that last
+
+
+TARGET AUDIENCE
+================================================================================
+
+1. Students looking to learn modern web development
+2. Professionals seeking to upskill in AI/automation
+3. Educational institutions needing training programs
+4. Corporate teams requiring workshops
+5. Beginners wanting practical guidance
+6. Intermediate learners exploring new technologies
+
+
+================================================================================
+IMAGE GENERATION SUGGESTIONS:
+================================================================================
+
+1. HERO IMAGE
+   - Group of diverse students/professionals learning
+   - Laptops, collaborative environment
+   - Outdoor learning or modern classroom
+   - Hands-on development session in progress
+
+2. WEB DEVELOPMENT IMAGE
+   - Developer writing code
+   - Modern IDE, multiple screens
+   - Building responsive interfaces
+   - Frontend/UI focus
+
+3. BACKEND API DEVELOPMENT IMAGE
+   - Database diagrams
+   - Server architecture
+   - API connections and integration
+   - Technical infrastructure
+
+4. AI & AUTOMATION IMAGE
+   - Workflow automation diagram
+   - AI/ML concepts visualization
+   - Automated processes in action
+   - Neural networks or AI concepts
+
+5. WORKSHOPS IMAGE
+   - Group of people in corporate training
+   - Institutions/colleges
+   - Teams collaborating
+   - Customized learning programs
+
+6. APPROACH/METHODOLOGY IMAGE
+   - Hands-on coding session
+   - Problem-solving in progress
+   - Mentoring moment
+   - Clear, practical guidance
+
+================================================================================

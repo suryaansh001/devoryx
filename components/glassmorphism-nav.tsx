@@ -143,10 +143,10 @@ export function GlassmorphismNav() {
               <div className="hidden md:block">
                 <Link
                   href="/contact"
-                  className="relative bg-white hover:bg-gray-50 text-black font-medium px-6 py-2 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
+                  className="relative bg-white hover:bg-gray-50 text-black font-medium px-4 py-1.5 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group text-sm"
                 >
-                  <span className="mr-2">Start a Project</span>
-                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <span className="mr-1.5">Start a Project</span>
+                  <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </div>
 

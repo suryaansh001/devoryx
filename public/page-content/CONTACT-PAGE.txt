@@ -1,0 +1,196 @@
+================================================================================
+DEVORYX - CONTACT PAGE CONTENT
+================================================================================
+
+PAGE HEADING
+================================================================================
+
+Main Title: "Get In Touch"
+
+Subtitle: "Ready to start your project? Fill out the form below and we'll get 
+back to you within 24 hours."
+
+
+CONTACT FORM FIELDS
+================================================================================
+
+The page includes a contact form with the following information collection:
+
+1. Name
+2. Email
+3. Phone Number (optional)
+4. Project Type / Service Interested In
+   - Training & Workshops
+   - AI & Automation
+   - Web Development
+   - Mobile App Development
+   - Digital Marketing
+   - Billing Software
+   - Other / Custom Inquiry
+
+5. Project Description / Message
+   - Details about what you need
+   - Current challenges
+   - Project scope (if known)
+   - Timeline expectations
+
+6. Budget Range (optional)
+   - To help us understand project scope
+
+7. Preferred Contact Method
+   - Email
+   - Phone
+   - Video Call
+
+
+FORM SUBMISSION
+================================================================================
+
+Response Time: Within 24 hours
+
+Next Steps After Submission:
+1. Form received acknowledgment
+2. Initial consultation call/email
+3. Discussion of project requirements
+4. Scope definition
+5. Proposal or next steps
+
+
+CONTACT INFORMATION DISPLAY
+================================================================================
+
+Alternative Ways to Get in Touch:
+- Email
+- Phone
+- LinkedIn (optional)
+- Social Media (optional)
+
+
+KEY MESSAGING
+================================================================================
+
+Heading: "Get In Touch"
+
+Subheading: "Ready to start your project? Fill out the form below and we'll 
+get back to you within 24 hours."
+
+Main Points:
+- Quick response (within 24 hours)
+- Confidential discussion
+- No obligation consultation
+- Expert guidance
+- Friendly team
+
+
+TYPES OF INQUIRIES
+================================================================================
+
+Common Reasons to Contact:
+
+1. Training Inquiry
+   - Custom training programs
+   - Workshop for institution
+   - Team upskilling
+   - Personal learning
+
+2. Automation Inquiry
+   - Workflow automation
+   - Chatbot integration
+   - Lead generation system
+   - Process optimization
+
+3. Development Inquiry
+   - Website project
+   - Mobile app
+   - Custom system
+   - Dashboard/tool
+
+4. Support Inquiry
+   - Digital marketing
+   - Billing software
+   - Integration help
+   - Technical consultation
+
+5. General Inquiry
+   - Partnership opportunities
+   - Employment
+   - Other services
+
+
+EXPECTED OUTCOMES FROM CONTACT
+================================================================================
+
+Initial Consultation:
+- Understanding of your needs
+- Discussion of current challenges
+- Overview of Devoryx services
+- Exploration of relevant solutions
+
+If Project Fit:
+- Detailed requirements gathering
+- Scope definition
+- Timeline estimation
+- Budget discussion
+- Project planning
+
+Follow-up:
+- Proposal submission
+- Contract preparation
+- Project kickoff
+- Regular communication
+
+
+================================================================================
+IMAGE GENERATION SUGGESTIONS:
+================================================================================
+
+1. HERO IMAGE
+   - Professional consultation setting
+   - Team discussing a project
+   - Welcoming atmosphere
+   - Modern office environment
+   - Friendly and approachable
+   - Could show: video call, in-person meeting, or collaborative workspace
+
+2. CONTACT FORM AREA
+   - Clean form design on modern device
+   - Person typing message
+   - Professional but approachable
+   - Tech-forward aesthetic
+
+3. TEAM/SUPPORT IMAGE
+   - Friendly team members
+   - Available and helpful
+   - Professional yet approachable
+   - Diverse team
+   - Ready to assist
+
+4. COMMUNICATION IMAGE
+   - Multiple communication channels
+   - Email, phone, video call options
+   - Connection visualization
+   - Global communication
+   - Real-time connectivity
+
+5. SUCCESS/OUTCOME IMAGE
+   - Successful project completion
+   - Team celebrating
+   - Delivered solution
+   - Happy client
+   - Project success visualization
+
+6. CONSULTATION IMAGE
+   - One-on-one discussion
+   - Whiteboard planning
+   - Strategy session
+   - Problem-solving
+   - Collaborative planning
+
+7. RESPONSE TIME IMAGE
+   - Quick turnaround visualization
+   - 24-hour response indicator
+   - Fast and efficient
+   - Speed/momentum
+   - Rapid communication
+
+================================================================================

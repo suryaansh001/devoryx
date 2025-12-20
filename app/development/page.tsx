@@ -7,6 +7,7 @@ import SpotlightCard from "@/components/SpotlightCard"
 import Aurora from "@/components/Aurora"
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { Footer } from "@/components/footer"
+import Image from "next/image"
 
 export default function DevelopmentPage() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -103,6 +104,18 @@ export default function DevelopmentPage() {
       <section ref={sectionRef} className="py-16 sm:py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Development Services</h2>
+          
+          {/* Development Image */}
+          <div className="flex justify-center mb-12">
+            <Image
+              src="/images/development.png"
+              alt="Development Services"
+              width={600}
+              height={350}
+              className="rounded-2xl shadow-2xl max-w-2xl w-full"
+            />
+          </div>
+          
           <div
             className={`grid md:grid-cols-2 gap-6 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"

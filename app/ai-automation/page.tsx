@@ -7,6 +7,7 @@ import SpotlightCard from "@/components/SpotlightCard"
 import Aurora from "@/components/Aurora"
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { Footer } from "@/components/footer"
+import Image from "next/image"
 
 export default function AIAutomationPage() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -91,6 +92,17 @@ export default function AIAutomationPage() {
               We design AI-driven automation systems that integrate smoothly into existing processes. Our focus is on
               reducing repetitive effort while maintaining clarity and control.
             </p>
+          </div>
+          
+          {/* Automation Image */}
+          <div className="flex justify-center mb-12">
+            <Image
+              src="/images/AUTOMATION.png"
+              alt="AI Automation Solutions"
+              width={600}
+              height={350}
+              className="rounded-2xl shadow-2xl max-w-2xl w-full"
+            />
           </div>
         </div>
       </section>

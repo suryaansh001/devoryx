@@ -1,0 +1,85 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 240, 255, 0.95) 100%);
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.animationWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ease-out;
+}
+
+.svg {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.1));
+  animation: scale 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInPath {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: var(--target-opacity);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 240, 255, 0.98) 100%);
+  }
+
+  .svg {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .svg {
+    width: 150px;
+    height: auto;
+  }
+}
