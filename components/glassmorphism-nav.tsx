@@ -11,7 +11,7 @@ const navigation = [
   { name: "Training", href: "/training" },
   { name: "AI & Automation", href: "/ai-automation" },
   { name: "Development", href: "/development" },
-  { name: "Services", href: "/services" },
+  { name: "Other Services", href: "/services" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -146,10 +146,10 @@ export function GlassmorphismNav() {
               <div className="hidden md:block">
                 <TransitionLink
                   href="/contact"
-                  className="relative bg-white hover:bg-gray-50 text-black font-medium px-4 py-1.5 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group text-sm"
+                  className="relative bg-white hover:bg-gray-50 text-black font-medium px-3 py-1 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group text-xs"
                 >
-                  <span className="mr-1.5">Start a Project</span>
-                  <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <span className="mr-1">Start a Project</span>
+                  <ArrowRight size={12} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </TransitionLink>
               </div>
 
@@ -239,7 +239,7 @@ export function GlassmorphismNav() {
                 <div className="h-px bg-white/10 my-2" />
                 <TransitionLink
                   href="/contact"
-                  className={`relative bg-white hover:bg-gray-50 text-black font-medium px-6 py-3 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group transform ${
+                  className={`relative bg-white hover:bg-gray-50 text-black font-medium px-4 py-2 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group transform text-sm ${
                     isOpen ? "animate-mobile-menu-item" : ""
                   }`}
                   style={{
@@ -247,8 +247,8 @@ export function GlassmorphismNav() {
                   }}
                   onClick={() => setIsOpen(false)}
                 >
-                  <span className="mr-2">Start a Project</span>
-                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <span className="mr-1.5">Start a Project</span>
+                  <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </TransitionLink>
               </div>
             </div>
