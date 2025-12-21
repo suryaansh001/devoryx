@@ -14,17 +14,25 @@ export function CompassLoading({
   isLoading = true,
 }: CompassLoadingProps) {
   const [isVisible, setIsVisible] = useState(isLoading)
+  const [shouldFadeOut, setShouldFadeOut] = useState(false)
 
   useEffect(() => {
     setIsVisible(isLoading)
+    setShouldFadeOut(false)
   }, [isLoading])
 
   useEffect(() => {
     if (!isVisible) return
 
     const timer = setTimeout(() => {
-      setIsVisible(false)
-      onComplete?.()
+      setShouldFadeOut(true)
+      // Wait for fade animation to complete before hiding
+      const fadeTimer = setTimeout(() => {
+        setIsVisible(false)
+        onComplete?.()
+      }, 300) // Match the fade animation duration
+      
+      return () => clearTimeout(fadeTimer)
     }, duration)
 
     return () => clearTimeout(timer)
@@ -47,6 +55,9 @@ export function CompassLoading({
           justifyContent: 'center',
           alignItems: 'center',
           zIndex: 9999,
+          opacity: shouldFadeOut ? 0 : 1,
+          transition: 'opacity 0.3s ease-out',
+          pointerEvents: shouldFadeOut ? 'none' : 'auto',
         }}
       >
         {/* Rotating compass image */}

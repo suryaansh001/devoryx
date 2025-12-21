@@ -143,13 +143,13 @@ export function GlassmorphismNav() {
               </div>
 
               {/* Desktop CTA Button */}
-              <div className="hidden md:block">
+                <div className="hidden md:block">
                 <TransitionLink
                   href="/contact"
-                  className="relative bg-white hover:bg-gray-50 text-black font-medium px-3 py-1 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group text-xs"
+                  className="relative bg-white hover:bg-gray-50 text-black font-medium px-4 py-1.5 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group text-sm"
                 >
-                  <span className="mr-1">Start a Project</span>
-                  <ArrowRight size={12} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <span className="mr-1.5">Start a Project</span>
+                  <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </TransitionLink>
               </div>
 
