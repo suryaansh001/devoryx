@@ -7,7 +7,6 @@ import SpotlightCard from "@/components/SpotlightCard"
 import Aurora from "@/components/Aurora"
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { Footer } from "@/components/footer"
-import Image from "next/image"
 
 export default function TrainingPage() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -104,17 +103,7 @@ export default function TrainingPage() {
       <section ref={sectionRef} className="py-16 sm:py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Training Areas</h2>
-          
-          {/* Training Image */}
-          <div className="flex justify-center mb-12">
-            <Image
-              src="/images/training.png"
-              alt="Training Programs"
-              width={600}
-              height={350}
-              className="rounded-2xl shadow-2xl max-w-2xl w-full"
-            />
-          </div>
+
           
           <div
             className={`grid md:grid-cols-2 gap-6 transition-all duration-1000 ${

@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react"
 import { Menu, X, ArrowRight } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
+import { TransitionLink } from "./transition-link"
+import { usePageTransition } from "./page-transition-provider"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -19,6 +20,7 @@ export function GlassmorphismNav() {
   const [isVisible, setIsVisible] = useState(true)
   const [hasLoaded, setHasLoaded] = useState(false)
   const lastScrollY = useRef(0)
+  const { startLoading } = usePageTransition()
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -99,7 +101,7 @@ export function GlassmorphismNav() {
           <div className="bg-white/5 backdrop-blur-xl border border-white/40 rounded-full px-4 py-3 md:px-6 md:py-2">
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <Link
+              <TransitionLink
                 href="/"
                 className="flex items-center hover:scale-105 transition-transform duration-200 cursor-pointer"
               >
@@ -112,25 +114,26 @@ export function GlassmorphismNav() {
                     className="w-full h-full object-contain"
                   />
                 </div>
-              </Link>
+              </TransitionLink>
 
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center space-x-8">
                 {navigation.map((item) =>
                   item.href.startsWith("/") && !item.href.startsWith("/#") ? (
-                    <Link
+                    <TransitionLink
                       key={item.name}
                       href={item.href}
                       className="text-white/80 hover:text-white hover:scale-105 transition-all duration-200 font-medium cursor-pointer"
                     >
                       {item.name}
-                    </Link>
+                    </TransitionLink>
                   ) : (
                     <button
                       key={item.name}
-                      onClick={() =>
+                      onClick={() => {
+                        startLoading()
                         item.href.startsWith("/#") ? (window.location.href = item.href) : scrollToSection(item.href)
-                      }
+                      }}
                       className="text-white/80 hover:text-white hover:scale-105 transition-all duration-200 font-medium cursor-pointer"
                     >
                       {item.name}
@@ -141,13 +144,13 @@ export function GlassmorphismNav() {
 
               {/* Desktop CTA Button */}
               <div className="hidden md:block">
-                <Link
+                <TransitionLink
                   href="/contact"
                   className="relative bg-white hover:bg-gray-50 text-black font-medium px-4 py-1.5 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group text-sm"
                 >
                   <span className="mr-1.5">Start a Project</span>
                   <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
+                </TransitionLink>
               </div>
 
               {/* Mobile Menu Button */}
@@ -194,7 +197,7 @@ export function GlassmorphismNav() {
               <div className="flex flex-col space-y-1">
                 {navigation.map((item, index) =>
                   item.href.startsWith("/") && !item.href.startsWith("/#") ? (
-                    <Link
+                    <TransitionLink
                       key={item.name}
                       href={item.href}
                       className={`text-white/80 hover:text-white hover:bg-white/10 rounded-lg px-3 py-3 text-left transition-all duration-300 font-medium cursor-pointer transform hover:scale-[1.02] hover:translate-x-1 ${
@@ -206,11 +209,12 @@ export function GlassmorphismNav() {
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
-                    </Link>
+                    </TransitionLink>
                   ) : (
                     <button
                       key={item.name}
                       onClick={() => {
+                        startLoading()
                         if (item.href.startsWith("/#")) {
                           window.location.href = item.href
                         } else {
@@ -230,7 +234,7 @@ export function GlassmorphismNav() {
                   ),
                 )}
                 <div className="h-px bg-white/10 my-2" />
-                <Link
+                <TransitionLink
                   href="/contact"
                   className={`relative bg-white hover:bg-gray-50 text-black font-medium px-6 py-3 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group transform ${
                     isOpen ? "animate-mobile-menu-item" : ""
@@ -242,7 +246,7 @@ export function GlassmorphismNav() {
                 >
                   <span className="mr-2">Start a Project</span>
                   <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
+                </TransitionLink>
               </div>
             </div>
           </div>

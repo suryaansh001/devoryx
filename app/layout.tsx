@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Dancing_Script, Caveat } from "next/font/google"
+import { PageTransitionProvider } from "@/components/page-transition-provider"
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -34,7 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`font-sans antialiased ${dancingScript.variable} ${caveat.variable}`}>
-        {children}
+        <PageTransitionProvider>
+          {children}
+        </PageTransitionProvider>
         <SpeedInsights />
       </body>
     </html>

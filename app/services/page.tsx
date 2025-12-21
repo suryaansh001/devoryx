@@ -6,7 +6,6 @@ import SpotlightCard from "@/components/SpotlightCard"
 import Aurora from "@/components/Aurora"
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { Footer } from "@/components/footer"
-import Image from "next/image"
 
 export default function ServicesPage() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -87,16 +86,7 @@ export default function ServicesPage() {
       {/* Services List */}
       <section ref={sectionRef} className="py-16 sm:py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Services Image */}
-          <div className="flex justify-center mb-12">
-            <Image
-              src="/images/im3.png"
-              alt="Additional Services"
-              width={600}
-              height={350}
-              className="rounded-2xl shadow-2xl max-w-2xl w-full"
-            />
-          </div>
+
           
           <div
             className={`grid md:grid-cols-2 gap-8 transition-all duration-1000 ${
