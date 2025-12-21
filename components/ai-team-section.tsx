@@ -290,11 +290,7 @@ export function AITeamSection() {
 
                         <div className="bg-slate-900 px-6 py-4 text-white">
                           <div className="flex items-center gap-3">
-                            <img
-                              src="/images/michael-ai-agent.jpg"
-                              alt="AI Agent"
-                              className="w-8 h-8 rounded-full object-cover mr-2 mt-1 flex-shrink-0"
-                            />
+                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 mr-2 mt-1 flex-shrink-0 flex items-center justify-center text-white font-bold text-xs">AI</div>
                             <div className="flex-1">
                               <h3 className="font-semibold text-sm">Devoryx Assistant</h3>
                               <p className="text-xs text-slate-300">devoryx.xyz</p>
@@ -318,11 +314,7 @@ export function AITeamSection() {
                               className={`flex ${message.sender === "customer" ? "justify-end" : "justify-start"}`}
                             >
                               {message.sender === "ai" && (
-                                <img
-                                  src="/images/michael-ai-agent.jpg"
-                                  alt="AI"
-                                  className="w-6 h-6 rounded-full object-cover mr-2 mt-1 flex-shrink-0"
-                                />
+                                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 mr-2 mt-1 flex-shrink-0 flex items-center justify-center text-white font-bold text-xs">A</div>
                               )}
                               <div
                                 className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed ${
@@ -346,11 +338,7 @@ export function AITeamSection() {
                           {/* Typing indicator */}
                           {isTyping && (
                             <div className="flex justify-start items-start">
-                              <img
-                                src="/images/michael-ai-agent.jpg"
-                                alt="AI"
-                                className="w-6 h-6 rounded-full object-cover mr-2 mt-1 flex-shrink-0"
-                              />
+                              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 mr-2 mt-1 flex-shrink-0 flex items-center justify-center text-white font-bold text-xs">A</div>
                               <div className="bg-white p-3 rounded-2xl rounded-bl-md shadow-sm border border-slate-200">
                                 <div className="flex space-x-1">
                                   <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce"></div>

@@ -74,15 +74,13 @@ export function ProblemSolutionSection() {
           }`}
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-white/60 rounded-full mr-2 animate-pulse"></span>A Practical Technology Partner
+            <span className="w-2 h-2 bg-white/60 rounded-full mr-2 animate-pulse"></span>Our Proven Framework
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-balance mb-4 sm:mb-6">
-            Building Systems Meant to Be Used
+            Your Data. Your Requirements. Our Solution.
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
-            Devoryx is a focused technology team delivering websites, applications, automation, and training with a
-            clear emphasis on well-defined scope and reliable execution. We build systems meant to be used, scaled, and
-            maintained — not just showcased.
+            We believe in a straightforward approach: understand your data, listen to your needs, and build AI & ML solutions that actually work for your business. No overengineering. Just results.
           </p>
         </div>
 
@@ -99,7 +97,7 @@ export function ProblemSolutionSection() {
                 <div className="p-2 rounded-lg bg-white/20">
                   <CheckCircle />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">Why Work With Devoryx</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Why Choose Devoryx for AI & ML</h3>
               </div>
 
               {/* Solution Points */}
@@ -107,25 +105,25 @@ export function ProblemSolutionSection() {
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle />
-                    <p className="text-white/80 text-sm sm:text-base">Clearly defined scope and deliverables</p>
+                    <p className="text-white/80 text-sm sm:text-base">Deep analysis of your unique data</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle />
-                    <p className="text-white/80 text-sm sm:text-base">Practical, execution-first approach</p>
+                    <p className="text-white/80 text-sm sm:text-base">Custom models tailored to your needs</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle />
-                    <p className="text-white/80 text-sm sm:text-base">No overengineering or false guarantees</p>
+                    <p className="text-white/80 text-sm sm:text-base">Seamless integration with existing systems</p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle />
-                    <p className="text-white/80 text-sm sm:text-base">Flexible and scalable solutions</p>
+                    <p className="text-white/80 text-sm sm:text-base">Continuous optimization and support</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle />
-                    <p className="text-white/80 text-sm sm:text-base">Transparent communication throughout</p>
+                    <p className="text-white/80 text-sm sm:text-base">Measurable ROI and real-world results</p>
                   </div>
                 </div>
               </div>
@@ -143,10 +141,10 @@ export function ProblemSolutionSection() {
           }`}
         >
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 text-balance">
-            Let's build something reliable, scalable, and well-defined
+            Ready to transform your business with AI & ML?
           </h3>
           <p className="text-sm sm:text-base md:text-lg text-white/70 mb-6 sm:mb-8 max-w-2xl mx-auto font-light leading-relaxed">
-            Share your requirement and we'll respond with clarity — no pressure and no unnecessary upselling.
+            Let's discuss your data, your challenges, and how we can build a solution that delivers real value to your organization.
           </p>
           <Button
             size="lg"

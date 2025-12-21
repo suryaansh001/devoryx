@@ -45,53 +45,52 @@ export function HeroSection() {
 
         {/* Main Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-balance mb-6 animate-fade-in-heading">
-          <span className="text-foreground">Skills, Systems, and Automation — Built with Clarity.</span>
+          <span className="text-foreground">AI & ML Solutions Built For Your Business</span>
         </h1>
 
         {/* Subheading */}
         <p className="text-base sm:text-xl md:text-2xl text-white text-balance max-w-sm sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 animate-fade-in-subheading font-light">
-          Devoryx delivers practical technology training, AI-driven automation, and dependable digital systems for
-          individuals, institutions, and businesses.
+          Your Data. Your Requirements. Our Solution.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-16 animate-fade-in-buttons">
-          <TransitionLink href="/development"
+          <TransitionLink href="/ai-automation"
             className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer relative overflow-hidden inline-flex items-center"
           >
-            Start a Project
+            Explore AI & ML Solutions
             <ArrowRight />
           </TransitionLink>
 
-          <TransitionLink href="/services"
+          <TransitionLink href="/contact"
             className="rounded-full px-8 py-4 text-lg font-medium border border-white hover:bg-white/10 transition-all duration-200 hover:scale-105 group bg-transparent cursor-pointer inline-flex items-center text-white"
           >
             <Play />
-            Explore Our Capabilities
+            Start Your Project
           </TransitionLink>
         </div>
 
         {/* Trust Indicators */}
         <div className="text-center px-4 hidden sm:block overflow-hidden animate-fade-in-trust">
-          <p className="text-sm text-white mb-6">Custom solutions scoped per project</p>
+          <p className="text-sm text-white mb-6">Comprehensive AI & ML Solutions</p>
           <div className="relative overflow-hidden w-full max-w-4xl mx-auto">
             <div className="flex items-center gap-8 opacity-60 hover:opacity-80 transition-all duration-500 animate-slide-left">
               <div className="flex items-center gap-8 whitespace-nowrap">
-                <div className="text-base sm:text-lg font-semibold">Web Development</div>
-                <div className="text-base sm:text-lg font-semibold">Mobile Apps</div>
+                <div className="text-base sm:text-lg font-semibold">Data Analysis</div>
+                <div className="text-base sm:text-lg font-semibold">ML Models</div>
                 <div className="text-base sm:text-lg font-semibold">AI Automation</div>
-                <div className="text-base sm:text-lg font-semibold">Training</div>
-                <div className="text-base sm:text-lg font-semibold">Digital Marketing</div>
-                <div className="text-base sm:text-lg font-semibold">Custom Systems</div>
+                <div className="text-base sm:text-lg font-semibold">Predictions</div>
+                <div className="text-base sm:text-lg font-semibold">Integration</div>
+                <div className="text-base sm:text-lg font-semibold">Optimization</div>
               </div>
               {/* Duplicate for seamless loop */}
               <div className="flex items-center gap-8 whitespace-nowrap">
-                <div className="text-base sm:text-lg font-semibold">Web Development</div>
-                <div className="text-base sm:text-lg font-semibold">Mobile Apps</div>
+                <div className="text-base sm:text-lg font-semibold">Data Analysis</div>
+                <div className="text-base sm:text-lg font-semibold">ML Models</div>
                 <div className="text-base sm:text-lg font-semibold">AI Automation</div>
-                <div className="text-base sm:text-lg font-semibold">Training</div>
-                <div className="text-base sm:text-lg font-semibold">Digital Marketing</div>
-                <div className="text-base sm:text-lg font-semibold">Custom Systems</div>
+                <div className="text-base sm:text-lg font-semibold">Predictions</div>
+                <div className="text-base sm:text-lg font-semibold">Integration</div>
+                <div className="text-base sm:text-lg font-semibold">Optimization</div>
               </div>
             </div>
           </div>
@@ -99,7 +98,7 @@ export function HeroSection() {
 
         {/* Mobile Trust Indicators */}
         <div className="text-center px-4 mb-8 sm:hidden overflow-hidden animate-fade-in-trust">
-          <p className="text-sm text-white mb-6">Custom solutions scoped per project</p>
+          <p className="text-sm text-white mb-6">Comprehensive AI & ML Solutions</p>
           <div className="relative overflow-hidden w-full max-w-sm mx-auto">
             {/* Left blur fade */}
             <div className="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
@@ -107,21 +106,21 @@ export function HeroSection() {
             <div className="absolute right-0 top-0 w-8 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
             <div className="flex items-center gap-6 opacity-60 animate-slide-left-mobile">
               <div className="flex items-center gap-6 whitespace-nowrap">
-                <div className="text-sm font-semibold">Web Dev</div>
-                <div className="text-sm font-semibold">Mobile Apps</div>
+                <div className="text-sm font-semibold">Data Analysis</div>
+                <div className="text-sm font-semibold">ML Models</div>
                 <div className="text-sm font-semibold">AI Automation</div>
-                <div className="text-sm font-semibold">Training</div>
-                <div className="text-sm font-semibold">Marketing</div>
-                <div className="text-sm font-semibold">Custom Systems</div>
+                <div className="text-sm font-semibold">Predictions</div>
+                <div className="text-sm font-semibold">Integration</div>
+                <div className="text-sm font-semibold">Optimization</div>
               </div>
               {/* Duplicate for seamless loop */}
               <div className="flex items-center gap-6 whitespace-nowrap">
-                <div className="text-sm font-semibold">Web Dev</div>
-                <div className="text-sm font-semibold">Mobile Apps</div>
+                <div className="text-sm font-semibold">Data Analysis</div>
+                <div className="text-sm font-semibold">ML Models</div>
                 <div className="text-sm font-semibold">AI Automation</div>
-                <div className="text-sm font-semibold">Training</div>
-                <div className="text-sm font-semibold">Marketing</div>
-                <div className="text-sm font-semibold">Custom Systems</div>
+                <div className="text-sm font-semibold">Predictions</div>
+                <div className="text-sm font-semibold">Integration</div>
+                <div className="text-sm font-semibold">Optimization</div>
               </div>
             </div>
           </div>

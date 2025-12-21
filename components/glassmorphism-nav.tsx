@@ -206,7 +206,10 @@ export function GlassmorphismNav() {
                       style={{
                         animationDelay: isOpen ? `${index * 80 + 100}ms` : "0ms",
                       }}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => {
+                        startLoading()
+                        setIsOpen(false)
+                      }}
                     >
                       {item.name}
                     </TransitionLink>
