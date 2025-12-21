@@ -97,8 +97,8 @@ export function GlassmorphismNav() {
         }}
       >
         {/* Main Navigation */}
-        <div className="w-[90vw] max-w-xs md:max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/40 rounded-full px-4 py-3 md:px-6 md:py-2">
+        <div className="w-[90vw] md:w-[95vw] max-w-xs md:max-w-7xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/40 rounded-full px-4 py-3 md:px-8 md:py-3">
             <div className="flex items-center justify-between">
               {/* Logo */}
               <TransitionLink
@@ -143,13 +143,13 @@ export function GlassmorphismNav() {
               </div>
 
               {/* Desktop CTA Button */}
-                <div className="hidden md:block">
+              <div className="hidden md:block">
                 <TransitionLink
                   href="/contact"
-                  className="relative bg-white hover:bg-gray-50 text-black font-medium px-4 py-1.5 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group text-sm"
+                  className="relative bg-white hover:bg-gray-100 text-black font-semibold px-6 py-2.5 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/20 cursor-pointer group text-base whitespace-nowrap"
                 >
-                  <span className="mr-1.5">Start a Project</span>
-                  <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <span className="mr-2">Start a Project</span>
+                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </TransitionLink>
               </div>
 

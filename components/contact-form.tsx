@@ -2,8 +2,33 @@
 
 import type React from "react"
 
-import { useState } from "react"
-import { Send, CheckCircle2 } from "lucide-react"
+import { useState, useEffect } from "react"
+import { Send, CheckCircle2, AlertCircle } from "lucide-react"
+import emailjs from "@emailjs/browser"
+
+// Initialize EmailJS - Get these from your EmailJS dashboard
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || ""
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || ""
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
+
+// Email validation regex
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+// Phone validation for Indian numbers only
+const validateIndianPhoneNumber = (phone: string): boolean => {
+  // Remove spaces and hyphens
+  const cleanPhone = phone.replace(/[\s-]/g, "")
+  
+  // Must start with +91 followed by exactly 10 digits
+  const indianPhoneRegex = /^\+91\d{10}$/
+  
+  return indianPhoneRegex.test(cleanPhone)
+}
+
+// Validate email format
+const validateEmail = (email: string): boolean => {
+  return EMAIL_REGEX.test(email)
+}
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -16,36 +41,102 @@ export function ContactForm() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
+
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    if (EMAILJS_PUBLIC_KEY) {
+      emailjs.init(EMAILJS_PUBLIC_KEY)
+    }
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }))
+    
+    // Clear field error when user starts typing
+    if (fieldErrors[name]) {
+      setFieldErrors((prev) => {
+        const newErrors = { ...prev }
+        delete newErrors[name]
+        return newErrors
+      })
+    }
+    setError(null)
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setError(null)
+    setFieldErrors({})
+
+    const newErrors: Record<string, string> = {}
+
+    // Validate email
+    if (!validateEmail(formData.email)) {
+      newErrors.email = "Please enter a valid email address"
+    }
+
+    // Validate phone if provided
+    if (formData.phone && !validateIndianPhoneNumber(formData.phone)) {
+      newErrors.phone = "Phone must be in format +91 followed by 10 digits (e.g., +91 98765 43210)"
+    }
+
+    // If there are validation errors, display them
+    if (Object.keys(newErrors).length > 0) {
+      setFieldErrors(newErrors)
+      return
+    }
+
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      // Check if EmailJS is configured
+      if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+        throw new Error("EmailJS is not properly configured. Please check your environment variables.")
+      }
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          to_email: "your-email@devoryx.com", // Change this to your email
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company || "Not provided",
+          phone: formData.phone || "Not provided",
+          service: formData.service,
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      )
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        service: "",
-        message: "",
-      })
-    }, 3000)
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          service: "",
+          message: "",
+        })
+      }, 3000)
+    } catch (err) {
+      setIsSubmitting(false)
+      const errorMessage = err instanceof Error ? err.message : "Failed to send message. Please try again."
+      setError(errorMessage)
+      console.error("EmailJS Error:", err)
+    }
   }
 
   if (isSubmitted) {
@@ -54,7 +145,25 @@ export function ContactForm() {
         <div className="text-center">
           <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
           <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-          <p className="text-white/70">We'll get back to you within 24 hours.</p>
+          <p className="text-white/70">We've received your message and will get back to you within 24 hours.</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12">
+        <div className="text-center mb-6">
+          <AlertCircle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+          <h3 className="text-2xl font-bold text-white mb-2">Something Went Wrong</h3>
+          <p className="text-white/70 mb-4">{error}</p>
+          <button
+            onClick={() => setError(null)}
+            className="bg-white hover:bg-gray-50 text-black font-medium px-6 py-2 rounded-lg transition-all duration-300"
+          >
+            Try Again
+          </button>
         </div>
       </div>
     )
@@ -82,7 +191,7 @@ export function ContactForm() {
 
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-              Email Address *
+              Email Address * {fieldErrors.email && <span className="text-red-400 text-xs">({fieldErrors.email})</span>}
             </label>
             <input
               type="email"
@@ -91,7 +200,11 @@ export function ContactForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
+              className={`w-full px-4 py-3 bg-white/5 border rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 transition-all ${
+                fieldErrors.email 
+                  ? "border-red-500 focus:ring-red-400" 
+                  : "border-white/20 focus:ring-white/30"
+              }`}
               placeholder="john@example.com"
             />
           </div>
@@ -115,7 +228,7 @@ export function ContactForm() {
 
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
-              Phone Number
+              Phone Number (India) {fieldErrors.phone && <span className="text-red-400 text-xs">({fieldErrors.phone})</span>}
             </label>
             <input
               type="tel"
@@ -123,8 +236,12 @@ export function ContactForm() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
-              placeholder="+1 (555) 123-4567"
+              className={`w-full px-4 py-3 bg-white/5 border rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 transition-all ${
+                fieldErrors.phone 
+                  ? "border-red-500 focus:ring-red-400" 
+                  : "border-white/20 focus:ring-white/30"
+              }`}
+              placeholder="+91 98765 43210"
             />
           </div>
         </div>

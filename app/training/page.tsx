@@ -1,12 +1,14 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { BookOpen, Code, Users, Award } from "lucide-react"
+import { Zap, Users, CheckCircle, Lightbulb, AlertCircle, BookOpen, ClipboardList, Workflow } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import SpotlightCard from "@/components/SpotlightCard"
 import Aurora from "@/components/Aurora"
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { Footer } from "@/components/footer"
+import { ProcessFlowchart } from "@/components/process-flowchart"
+import { FeatureCard } from "@/components/feature-card"
 
 export default function TrainingPage() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -36,34 +38,87 @@ export default function TrainingPage() {
     }
   }, [])
 
-  const trainingAreas = [
+  const trainingBenefits = [
     {
-      icon: Code,
-      title: "Web Development",
-      description: "Modern web technologies and frameworks for building responsive applications.",
+      title: "Work Faster",
+      description: "Teams operate with greater efficiency and reduced learning time.",
+      icon: <Zap className="w-8 h-8 text-blue-400" />,
     },
     {
-      icon: BookOpen,
-      title: "Backend & API Development",
-      description: "Server-side development, database design, and RESTful API architecture.",
+      title: "Make Fewer Mistakes",
+      description: "Prevent costly errors through standardized usage patterns.",
+      icon: <CheckCircle className="w-8 h-8 text-green-400" />,
     },
     {
-      icon: Award,
-      title: "AI & Automation Basics",
-      description: "Introduction to AI integration and workflow automation fundamentals.",
-    },
-    {
-      icon: Users,
-      title: "College & Corporate Workshops",
-      description: "Custom training programs tailored to institutions and team requirements.",
+      title: "Reduce Support Burden",
+      description: "Teams depend less on support and senior members for guidance.",
+      icon: <Users className="w-8 h-8 text-purple-400" />,
     },
   ]
 
-  const trainingApproach = [
-    "Practical, hands-on sessions",
-    "Clear explanations and guided problem-solving",
-    "Focus on fundamentals and real use cases",
-    "Suitable for beginners and intermediate learners",
+  const whatWeTrain = [
+    {
+      title: "Product Usage & Onboarding",
+      items: ["End-to-end product workflows", "Role-based usage (sales, ops, support, devs)", "Correct vs incorrect usage patterns"],
+    },
+    {
+      title: "Process Alignment",
+      items: ["How the product fits into existing processes", "Where teams usually break things", "Standardizing usage across teams"],
+    },
+    {
+      title: "Team Enablement",
+      items: ["Training internal leads and trainers", "SOPs, checklists, and playbooks", "Reducing single-person dependency"],
+    },
+    {
+      title: "Workshops (College & Corporate)",
+      items: ["Product-focused, hands-on sessions", "Real scenarios, not theory", "Custom programs per team or institution"],
+    },
+  ]
+
+  const processSteps = [
+    {
+      title: "Assess Current Usage",
+      description: "Evaluate how teams currently use the product, identify pain points, bottlenecks, and areas of misuse or confusion.",
+    },
+    {
+      title: "Design Training Program",
+      description: "Create role-specific training paths tailored to sales, ops, support, dev, or management workflows.",
+    },
+    {
+      title: "Deliver Hands-On Training",
+      description: "Run live product sessions with real scenarios, not slides. Teams practice with their actual workflows.",
+    },
+    {
+      title: "Build Internal Capability",
+      description: "Train your internal leads and trainers so training continues independently. Provide SOPs and playbooks.",
+    },
+    {
+      title: "Validate & Measure",
+      description: "Track adoption metrics, reduce support tickets, ensure teams apply learning to daily workflows.",
+    },
+  ]
+
+  const forWho = [
+    {
+      icon: <AlertCircle className="w-8 h-8" />,
+      title: "Companies Launching or Scaling Products",
+      description: "Ensure teams can use your product effectively from day one.",
+    },
+    {
+      icon: <Lightbulb className="w-8 h-8" />,
+      title: "Teams Struggling with Adoption or Misuse",
+      description: "Fix broken workflows and bad habits before they become costly.",
+    },
+    {
+      icon: <ClipboardList className="w-8 h-8" />,
+      title: "Support & Ops Teams Overloaded",
+      description: "Reduce avoidable issues and free up your team for strategic work.",
+    },
+    {
+      icon: <BookOpen className="w-8 h-8" />,
+      title: "Institutions Needing Product-First Learning",
+      description: "Teach students and professionals real product skills, not theory.",
+    },
   ]
 
   return (
@@ -74,93 +129,136 @@ export default function TrainingPage() {
         </div>
         <div className="relative z-10">
           <GlassmorphismNav />
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-            Training & Workshops
-          </h1>
-          <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
-            Hands-on learning focused on real-world application.
-          </p>
-        </div>
-      </section>
 
-      {/* About Training Section */}
-      <section className="py-16 sm:py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About Our Training</h2>
-            <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
-              Training is a core focus at Devoryx. Our programs are designed for students, professionals, and teams who
-              want practical skills that translate directly into real projects and work environments.
-            </p>
-          </div>
-        </div>
-      </section>
+          {/* Hero Section */}
+          <section className="pt-32 pb-20 px-4">
+            <div className="max-w-6xl mx-auto text-center">
+              <div className="inline-block mb-6 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
+                <p className="text-sm font-medium text-white/80">Product Training That Works</p>
+              </div>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+                Make Your Product <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Actually Work</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
+                We don't explain features — we train people on how the product is actually used in daily workflows.
+              </p>
+            </div>
+          </section>
 
-      {/* Training Areas */}
-      <section ref={sectionRef} className="py-16 sm:py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Training Areas</h2>
-
-          
-          <div
-            className={`grid md:grid-cols-2 gap-6 transition-all duration-1000 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-            }`}
-          >
-            {trainingAreas.map((area, index) => (
-              <SpotlightCard key={index}>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-white/20 flex-shrink-0">
-                    <area.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{area.title}</h3>
-                    <p className="text-white/70 text-sm">{area.description}</p>
-                  </div>
-                </div>
-              </SpotlightCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Training Approach */}
-      <section className="py-16 sm:py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Our Approach</h2>
-          <div className="max-w-3xl mx-auto">
-            <SpotlightCard>
-              <div className="space-y-4">
-                {trainingApproach.map((approach, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-white/80 text-lg leading-relaxed">{approach}</p>
-                  </div>
+          {/* Key Benefits Section */}
+          <section className="py-20 px-4 bg-gradient-to-b from-transparent via-white/5 to-transparent">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center">After Training, Teams:</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {trainingBenefits.map((benefit, index) => (
+                  <FeatureCard key={index} title={benefit.title} description={benefit.description} icon={benefit.icon} delay={index * 100} />
                 ))}
               </div>
-            </SpotlightCard>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-      {/* CTA Section */}
-      <section className="py-16 sm:py-24 px-4 mb-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-8 sm:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Upskill?</h2>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-              Contact us to discuss custom training programs tailored to your needs.
-            </p>
-            <a href="/contact" className="inline-block bg-white text-black rounded-full px-8 py-3 text-lg font-medium hover:bg-gray-100 transition-colors">
-              Enquire About Training
-            </a>
-          </div>
-        </div>
-      </section>
-        <Footer />
+          {/* About Product Training */}
+          <section className="py-20 px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="rounded-3xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-8 sm:p-12 backdrop-blur-sm">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About Our Product Training</h2>
+                <p className="text-lg text-white/80 leading-relaxed mb-4">
+                  At Devoryx, product training is about making teams operational. We focus on practical, real-world application rather than theory or feature lists.
+                </p>
+                <p className="text-lg text-white/80 leading-relaxed">
+                  Our training ensures teams can execute without guessing. The outcome: <span className="font-semibold text-white">teams stop guessing and start executing.</span>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* What We Train Section */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center">What We Train</h2>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {whatWeTrain.map((category, index) => (
+                  <SpotlightCard key={index}>
+                    <div className="p-2">
+                      <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+                        {category.title}
+                      </h3>
+                      <ul className="space-y-4">
+                        {category.items.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 bg-white/40 rounded-full mt-2.5 flex-shrink-0"></div>
+                            <span className="text-white/80 text-base leading-relaxed">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </SpotlightCard>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Our Approach - Process Flow */}
+          <section className="py-20 px-4 bg-gradient-to-b from-white/5 to-transparent">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">Our Approach</h2>
+              <p className="text-lg text-white/70 text-center mb-16 max-w-2xl mx-auto">
+                Real workflows, not slides. Live product usage and scenarios. We fix bad habits and misuse through hands-on validation.
+              </p>
+
+              <div className="rounded-3xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-8 sm:p-12 backdrop-blur-sm">
+                <ProcessFlowchart steps={processSteps} />
+              </div>
+            </div>
+          </section>
+
+          {/* Who This Is For */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center">Who This Is For</h2>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {forWho.map((item, index) => (
+                  <FeatureCard
+                    key={index}
+                    title={item.title}
+                    description={item.description}
+                    icon={item.icon}
+                    delay={index * 100}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 px-4 mb-12">
+            <div className="max-w-2xl mx-auto">
+              <div className="relative rounded-3xl overflow-hidden">
+                {/* Animated background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-xl" />
+                <div className="absolute inset-0 border border-white/20 rounded-3xl" />
+
+                {/* Content */}
+                <div className="relative p-8 sm:p-12 text-center">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Ready to Make Your Product Work for Your Team?
+                  </h2>
+                  <p className="text-lg text-white/70 mb-8">
+                    Let's discuss how we can transform your team's product capability.
+                  </p>
+                  <a
+                    href="/contact"
+                    className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full px-8 py-3 text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-purple-500/50"
+                  >
+                    Enquire About Product Training
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </div>
