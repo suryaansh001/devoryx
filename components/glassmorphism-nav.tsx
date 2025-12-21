@@ -97,7 +97,7 @@ export function GlassmorphismNav() {
         }}
       >
         {/* Main Navigation */}
-        <div className="w-[90vw] md:w-[95vw] max-w-xs md:max-w-7xl mx-auto">
+        <div className="w-[90vw] md:w-[96vw] max-w-xs md:max-w-[1400px] mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/40 rounded-full px-4 py-3 md:px-8 md:py-3">
             <div className="flex items-center justify-between">
               {/* Logo */}

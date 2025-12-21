@@ -7,8 +7,8 @@ import SpotlightCard from "@/components/SpotlightCard"
 import Aurora from "@/components/Aurora"
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { Footer } from "@/components/footer"
-import { ProcessFlowchart } from "@/components/process-flowchart"
 import { FeatureCard } from "@/components/feature-card"
+import { TrainingPhasesRows } from "@/components/training-phases-rows"
 
 export default function TrainingPage() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -77,24 +77,126 @@ export default function TrainingPage() {
 
   const processSteps = [
     {
-      title: "Assess Current Usage",
-      description: "Evaluate how teams currently use the product, identify pain points, bottlenecks, and areas of misuse or confusion.",
+      title: "Training & Analysis (T&A) — Identify the Real Problem",
+      description: "We start with diagnosis, not training. Understand what is actually going wrong, identify performance gaps, and separate symptoms from root causes. The key question: Is this a skill issue, a process issue, or a behavior issue?",
     },
     {
-      title: "Design Training Program",
-      description: "Create role-specific training paths tailored to sales, ops, support, dev, or management workflows.",
+      title: "Define Company Expectations & Outcomes",
+      description: "Clarify what the company expects from its people—role-wise expectations, required behaviors, performance benchmarks, and alignment with business goals. This sets a clear target state before any training begins.",
     },
     {
-      title: "Deliver Hands-On Training",
-      description: "Run live product sessions with real scenarios, not slides. Teams practice with their actual workflows.",
+      title: "Competency Mapping & Gap Identification",
+      description: "Evaluate employees against expectations through skill assessment, behavioral evaluation, leadership gaps, and process adherence. The result is a clear view of what is missing, where, and why.",
     },
     {
-      title: "Build Internal Capability",
-      description: "Train your internal leads and trainers so training continues independently. Provide SOPs and playbooks.",
+      title: "Training Roadmap + ROI Projection",
+      description: "Design a custom training roadmap including what training is needed, who needs it, duration, and delivery format. We clearly show training investment, expected business improvement, and projected ROI.",
     },
     {
-      title: "Validate & Measure",
-      description: "Track adoption metrics, reduce support tickets, ensure teams apply learning to daily workflows.",
+      title: "Execution & Implementation",
+      description: "Structured, role-based training delivery using practical, scenario-based learning. Training is hands-on, measurable, and outcome-oriented with real workplace examples and behavior correction.",
+    },
+    {
+      title: "Closure, Validation & Long-Term Impact",
+      description: "Post-training validation, behavior and performance checks, process adherence improvement, and capability handover to internal teams. Final result: teams work better, operations become predictable and scalable.",
+    },
+  ]
+
+  const trainingAreas = [
+    {
+      title: "Behavioral & Soft Skills Training",
+      subtitle: "High Demand • Evergreen Skills",
+      items: [
+        "Communication (Email, Writing, Public Speaking)",
+        "Interpersonal Skills (Team Collaboration, Conflict Management, EQ)",
+        "Personal Effectiveness (Time Management, Stress Management, Problem Solving)",
+      ],
+    },
+    {
+      title: "Leadership & Management Training",
+      subtitle: "High Ticket • For Managers & Leaders",
+      items: [
+        "First-Time Manager Training (Delegation, Feedback, Performance Management)",
+        "Leadership Development (Situational Leadership, Coaching, Remote Leadership)",
+        "People Management (Engagement, Difficult Conversations, Motivation)",
+      ],
+    },
+    {
+      title: "Corporate Training",
+      subtitle: "Mandatory • Workplace Essentials",
+      items: [
+        "Corporate Ethics & Code of Conduct",
+        "POSH (Prevention of Sexual Harassment)",
+        "Diversity, Equity & Inclusion (DEI) • Workplace Safety Awareness",
+      ],
+    },
+    {
+      title: "Learning & Capability Development",
+      subtitle: "Your Strong Zone",
+      items: [
+        "Train-the-Trainer (TTT) Programs",
+        "Instructional Design Fundamentals",
+        "Adult Learning Principles & LMS Adoption",
+        "Creating Effective Training Content",
+      ],
+    },
+    {
+      title: "Sales, Customer & Business Skills",
+      subtitle: "Revenue & Relationship Focused",
+      items: [
+        "Sales Effectiveness & Negotiation Skills",
+        "Consultative Selling & Customer Service Excellence",
+        "Client Relationship Management",
+      ],
+    },
+    {
+      title: "Technical & Digital Skills",
+      subtitle: "Non-Coding • Practical Tools",
+      items: [
+        "MS Excel / Power BI (Business Use)",
+        "Digital Productivity Tools (MS Teams, Google Workspace)",
+        "AI for Workplace Productivity",
+        "Data Literacy for Non-Tech Professionals",
+      ],
+    },
+    {
+      title: "Compliance & Process Training",
+      subtitle: "Mandatory • Risk Management",
+      items: [
+        "Information Security Awareness",
+        "Data Privacy & GDPR Basics",
+        "Quality Management (ISO Awareness)",
+        "SOP & Process Training",
+      ],
+    },
+    {
+      title: "Product Training",
+      subtitle: "Software & Tool Mastery",
+      items: [
+        "End-to-end product workflows & role-based usage",
+        "Correct vs incorrect usage patterns",
+        "Machine/factory-based product training",
+      ],
+    },
+    {
+      title: "Consulting Services",
+      subtitle: "High Value • Long-Term Impact",
+      items: [
+        "Training Needs Analysis (TNA)",
+        "Competency Mapping & Learning Strategy",
+        "LMS Selection & Implementation Support",
+        "Evaluation & ROI of Training",
+      ],
+    },
+    {
+      title: "Custom & Industry-Specific Programs",
+      subtitle: "Tailored Solutions",
+      items: [
+        "Onboarding Programs",
+        "Culture Building Programs",
+        "Change Management Training",
+        "High-Potential (HiPo) Programs",
+      ],
     },
   ]
 
@@ -175,21 +277,27 @@ export default function TrainingPage() {
           {/* What We Train Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center">What We Train</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">Our Training Domains</h2>
+              <p className="text-lg text-white/70 text-center mb-16 max-w-3xl mx-auto">
+                We offer comprehensive training across 10 key areas, from behavioral skills to consulting services. Each domain is designed to drive measurable business outcomes.
+              </p>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                {whatWeTrain.map((category, index) => (
+              <div className="grid md:grid-cols-2 gap-6">
+                {trainingAreas.map((category, index) => (
                   <SpotlightCard key={index}>
-                    <div className="p-2">
-                      <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                        <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
-                        {category.title}
-                      </h3>
-                      <ul className="space-y-4">
+                    <div className="p-3">
+                      <div className="mb-4">
+                        <h3 className="text-xl font-bold text-white mb-1 flex items-center gap-3">
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+                          {category.title}
+                        </h3>
+                        <p className="text-sm text-white/50 font-medium ml-5">{category.subtitle}</p>
+                      </div>
+                      <ul className="space-y-3 ml-5">
                         {category.items.map((item, itemIndex) => (
                           <li key={itemIndex} className="flex items-start gap-3">
-                            <div className="w-1.5 h-1.5 bg-white/40 rounded-full mt-2.5 flex-shrink-0"></div>
-                            <span className="text-white/80 text-base leading-relaxed">{item}</span>
+                            <div className="w-1 h-1 bg-white/40 rounded-full mt-2.5 flex-shrink-0"></div>
+                            <span className="text-white/75 text-sm leading-relaxed">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -200,16 +308,25 @@ export default function TrainingPage() {
             </div>
           </section>
 
+          {/* Training Delivery Model - Phase Rows */}
+          <TrainingPhasesRows />
+
           {/* Our Approach - Process Flow */}
           <section className="py-20 px-4 bg-gradient-to-b from-white/5 to-transparent">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">Our Approach</h2>
-              <p className="text-lg text-white/70 text-center mb-16 max-w-2xl mx-auto">
-                Real workflows, not slides. Live product usage and scenarios. We fix bad habits and misuse through hands-on validation.
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">Our Training & Capability Development Process</h2>
+              <p className="text-lg text-white/70 text-center mb-16 max-w-3xl mx-auto">
+                We solve performance problems using structured analysis, targeted training, and measurable outcomes. Not a one-size-fits-all approach—genuine transformation.
               </p>
 
-              <div className="rounded-3xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-8 sm:p-12 backdrop-blur-sm">
-                <ProcessFlowchart steps={processSteps} />
+              {/* Bottom message */}
+              <div className="text-center">
+                <div className="inline-block rounded-2xl border border-white/20 bg-white/5 p-6 sm:p-8 backdrop-blur-sm">
+                  <p className="text-lg text-white/80 leading-relaxed">
+                    <span className="font-semibold text-white">We don't sell training programs.</span><br />
+                    We solve performance problems and help teams work better, managers manage better, and operations become predictable and scalable.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -244,16 +361,16 @@ export default function TrainingPage() {
                 {/* Content */}
                 <div className="relative p-8 sm:p-12 text-center">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Ready to Make Your Product Work for Your Team?
+                    Let's Build Capability, Not Just Deliver Training
                   </h2>
                   <p className="text-lg text-white/70 mb-8">
-                    Let's discuss how we can transform your team's product capability.
+                    Tell us your challenges. We'll diagnose, design, and deliver results.
                   </p>
                   <a
                     href="/contact"
                     className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full px-8 py-3 text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-purple-500/50"
                   >
-                    Enquire About Product Training
+                    Start a Training Consultation
                   </a>
                 </div>
               </div>
