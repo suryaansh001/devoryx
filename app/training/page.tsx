@@ -104,107 +104,94 @@ export default function TrainingPage() {
 
   const trainingAreas = [
     {
-      title: "Behavioral & Soft Skills Training",
-      subtitle: "High Demand • Evergreen Skills",
+      title: "Communication & Workplace Effectiveness",
+      description: "Sharpen how teams think, communicate, and collaborate.",
       items: [
-        "Communication (Email, Writing, Public Speaking)",
-        "Interpersonal Skills (Team Collaboration, Conflict Management, EQ)",
-        "Personal Effectiveness (Time Management, Stress Management, Problem Solving)",
+        "Business & professional communication",
+        "Email writing, presentations, public speaking",
+        "Stakeholder communication & workplace etiquette",
+        "Team collaboration, conflict management, EQ",
+        "Time, stress, decision-making & critical thinking",
       ],
     },
     {
-      title: "Leadership & Management Training",
-      subtitle: "High Ticket • For Managers & Leaders",
+      title: "Leadership & Management Development",
+      description: "For managers, team leads, and future leaders.",
       items: [
-        "First-Time Manager Training (Delegation, Feedback, Performance Management)",
-        "Leadership Development (Situational Leadership, Coaching, Remote Leadership)",
-        "People Management (Engagement, Difficult Conversations, Motivation)",
+        "First-time manager transition",
+        "Delegation, feedback & performance management",
+        "Situational leadership & coaching skills",
+        "Leading remote / hybrid teams",
+        "Strategic thinking, accountability & engagement",
       ],
     },
     {
-      title: "Corporate Training",
-      subtitle: "Mandatory • Workplace Essentials",
+      title: "Corporate & Mandatory Training",
+      description: "Essential programs required for compliant workplaces.",
       items: [
-        "Corporate Ethics & Code of Conduct",
-        "POSH (Prevention of Sexual Harassment)",
-        "Diversity, Equity & Inclusion (DEI) • Workplace Safety Awareness",
-      ],
-    },
-    {
-      title: "Learning & Capability Development",
-      subtitle: "Your Strong Zone",
-      items: [
-        "Train-the-Trainer (TTT) Programs",
-        "Instructional Design Fundamentals",
-        "Adult Learning Principles & LMS Adoption",
-        "Creating Effective Training Content",
-      ],
-    },
-    {
-      title: "Sales, Customer & Business Skills",
-      subtitle: "Revenue & Relationship Focused",
-      items: [
-        "Sales Effectiveness & Negotiation Skills",
-        "Consultative Selling & Customer Service Excellence",
-        "Client Relationship Management",
+        "Corporate ethics & code of conduct",
+        "POSH & workplace safety",
+        "Diversity, equity & inclusion (DEI)",
       ],
     },
     {
       title: "Induction & Onboarding",
-      subtitle: "Revenue & Relationship Focused",
+      description: "Get new hires productive, faster.",
       items: [
-        "Role clarity and performance alignment",
-        "Culture, policies, and ways of working",
-        "Tools, processes, and compliance overview",
+        "Role clarity & performance expectations",
+        "Culture, policies & ways of working",
+        "Tools, processes & compliance overview",
       ],
     },
     {
-      title: "Technical & Digital Skills",
-      subtitle: "Non-Coding • Practical Tools",
+      title: "Sales, Customer & Business Skills",
+      description: "Improve revenue conversations and client relationships.",
       items: [
-        "MS Excel / Power BI (Business Use)",
-        "Digital Productivity Tools (MS Teams, Google Workspace)",
-        "AI for Workplace Productivity",
-        "Data Literacy for Non-Tech Professionals",
+        "Sales effectiveness & negotiation",
+        "Consultative selling",
+        "Customer service excellence",
+        "Client relationship management",
+      ],
+    },
+    {
+      title: "Technical & Digital Skills (Non-Coding)",
+      description: "Practical skills for modern workplaces.",
+      items: [
+        "Excel & Power BI for business users",
+        "Digital productivity tools",
+        "AI for workplace productivity",
+        "Data literacy for non-technical teams",
+        "Product training (software & factory-based systems)",
       ],
     },
     {
       title: "Compliance & Process Training",
-      subtitle: "Mandatory • Risk Management",
+      description: "Reduce risk and improve consistency.",
       items: [
-        "Information Security Awareness",
-        "Data Privacy & GDPR Basics",
-        "Quality Management (ISO Awareness)",
-        "SOP & Process Training",
+        "Information security awareness",
+        "Data privacy & GDPR basics",
+        "ISO & quality awareness",
+        "SOP and process training",
       ],
     },
     {
-      title: "Product Training",
-      subtitle: "Software & Tool Mastery",
-      items: [
-        "End-to-end product workflows & role-based usage",
-        "Correct vs incorrect usage patterns",
-        "Machine/factory-based product training",
-      ],
-    },
-    {
-      title: "Consulting Services",
-      subtitle: "High Value • Long-Term Impact",
+      title: "Consulting & High-Value Engagements",
+      description: "Where training meets business outcomes.",
       items: [
         "Training Needs Analysis (TNA)",
-        "Competency Mapping & Learning Strategy",
-        "LMS Selection & Implementation Support",
-        "Evaluation & ROI of Training",
+        "Competency mapping & gap analysis",
+        "Learning strategy & roadmap",
+        "LMS selection & rollout",
+        "Training evaluation & ROI measurement",
       ],
     },
     {
       title: "Custom & Industry-Specific Programs",
-      subtitle: "Tailored Solutions",
+      description: "Tailored to your business context.",
       items: [
-        "Onboarding Programs",
-        "Culture Building Programs",
-        "Change Management Training",
-        "High-Potential (HiPo) Programs",
+        "Onboarding & culture programs",
+        "Change management training",
+        "High-potential (HiPo) programs",
       ],
     },
   ]
@@ -286,21 +273,25 @@ export default function TrainingPage() {
           {/* What We Train Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">Our Training Domains</h2>
-              <p className="text-lg text-white/70 text-center mb-16 max-w-3xl mx-auto">
-                Our training spans key organizational capabilities, enabling leaders to build skilled, execution-ready teams aligned to business priorities.
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">Training & Capability Development</h2>
+              <p className="text-lg text-white/70 text-center mb-4 max-w-3xl mx-auto">
+                <span className="font-semibold text-white">Built to Improve Performance, Not Attendance</span>
               </p>
+              <p className="text-lg text-white/70 text-center mb-16 max-w-3xl mx-auto">
+                We design training programs that fix execution gaps, strengthen leadership, and make teams operational faster.
+              </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">Core Training Areas</h3>
 
               <div className="grid md:grid-cols-2 gap-6">
                 {trainingAreas.map((category, index) => (
-                  <SpotlightCard key={index}>
+                  <SpotlightCard key={index} className="border-2 border-white">
                     <div className="p-3">
                       <div className="mb-4">
-                        <h3 className="text-xl font-bold text-white mb-1 flex items-center gap-3">
+                        <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-3">
                           <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
                           {category.title}
                         </h3>
-                        <p className="text-sm text-white/50 font-medium ml-5">{category.subtitle}</p>
+                        <p className="text-sm text-white/70 font-medium ml-5 mb-3">{category.description}</p>
                       </div>
                       <ul className="space-y-3 ml-5">
                         {category.items.map((item, itemIndex) => (
