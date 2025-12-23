@@ -8,11 +8,11 @@ import { usePageTransition } from "./page-transition-provider"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Training", href: "/training" },
+  { name: "Training & Consultation", href: "/training" },
   { name: "AI & Automation", href: "/ai-automation" },
   { name: "Development", href: "/development" },
   { name: "Other Services", href: "/services" },
-  { name: "Contact", href: "/contact" },
+  //{ name: "Contact", href: "/contact" },
 ]
 
 export function GlassmorphismNav() {
@@ -148,7 +148,7 @@ export function GlassmorphismNav() {
                   href="/contact"
                   className="relative bg-white hover:bg-gray-100 text-black font-semibold px-6 py-2.5 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/20 cursor-pointer group text-base whitespace-nowrap"
                 >
-                  <span className="mr-2">Start a Project</span>
+                  <span className="mr-2">Contact Us</span>
                   <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </TransitionLink>
               </div>

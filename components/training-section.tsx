@@ -1,7 +1,8 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { GraduationCap, Users, Code, BookOpen } from "lucide-react"
+import Link from "next/link"
+import { GraduationCap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import SpotlightCard from "./SpotlightCard"
 
@@ -44,88 +45,121 @@ export function TrainingSection() {
     }
   }, [])
 
-  const trainingPrograms = [
-    {
-      icon: Code,
-      title: "Web Development Training",
-      description: "Hands-on training in modern web technologies and frameworks",
-    },
-    {
-      icon: BookOpen,
-      title: "Backend & API Development",
-      description: "Learn server-side development and API design",
-    },
-    {
-      icon: GraduationCap,
-      title: "AI & Automation Basics",
-      description: "Introduction to AI integration and workflow automation",
-    },
-    {
-      icon: Users,
-      title: "College & Corporate Workshops",
-      description: "Custom training programs for institutions and teams",
-    },
-  ]
-
   return (
-    <section id="training" ref={sectionRef} className="py-16 sm:py-24 px-4 relative z-10">
+    <section id="training" ref={sectionRef} className="py-20 sm:py-32 px-4 relative z-10">
       <div className="max-w-7xl mx-auto">
-        {/* Main Card Container */}
         <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-8 sm:p-12 md:p-16">
           <div
-            className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${
+            className={`text-center mb-16 sm:mb-20 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-6">
-              <GraduationCap className="w-4 h-4 mr-2" />
-              Training & Workshops
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-balance mb-4 sm:mb-6">
-              Practical Skills for Real-World Application
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-balance mb-6 sm:mb-8">
+              Training That Fixes <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Real Problems</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
-              Our training programs focus on hands-on learning, practical skills, and real-world application rather than
-              theoretical overload.
+              We don&apos;t run generic programs.<br />
+              We diagnose what&apos;s breaking performance and train teams to execute correctly—fast, consistently, and without dependency.<br />
+              <span className="font-semibold text-white">Result: fewer mistakes, faster adoption, predictable outcomes.</span>
             </p>
           </div>
 
           <div
-            className={`grid md:grid-cols-2 gap-6 mb-12 transition-all duration-1000 delay-300 ${
+            className={`mb-16 transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
             }`}
           >
-            {trainingPrograms.map((program, index) => (
-              <SpotlightCard key={index}>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-white/20">
-                    <program.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{program.title}</h3>
-                    <p className="text-white/70 text-sm">{program.description}</p>
-                  </div>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center">What Makes Our Training Different</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-5">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-white/80 leading-relaxed">Built around real workflows, not slides</span>
                 </div>
-              </SpotlightCard>
-            ))}
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-white/80 leading-relaxed">Focused on behavior + process + execution</span>
+                </div>
+              </div>
+              <div className="space-y-5">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-white/80 leading-relaxed">Designed to reduce support, rework, and confusion</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-white/80 leading-relaxed">Measurable impact, not attendance certificates</span>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
 
           <div
-            className={`text-center transition-all duration-1000 delay-600 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            } bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 sm:p-8`}
+            className={`mb-16 transition-all duration-1000 delay-500 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            }`}
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Ready to Upskill Your Team?</h3>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center">When Training Makes Sense</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-5">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-white/80 leading-relaxed">Teams misuse tools or follow broken processes</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-white/80 leading-relaxed">Managers struggle to drive consistent performance</span>
+                </div>
+              </div>
+              <div className="space-y-5">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-white/80 leading-relaxed">Support and ops are overloaded with avoidable issues</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <span className="text-white/80 leading-relaxed">New hires take too long to become productive</span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <div
+            className={`mb-16 transition-all duration-1000 delay-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            } text-center`}
+          >
+            <div className="inline-block rounded-2xl border border-white/20 bg-white/5 p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-white mb-3">Why Partner With Us</h3>
+              <p className="text-white/80 leading-relaxed text-lg">
+                Training with measurable impact, structured methodology,<br />
+                <span className="font-semibold text-white">and results that drive business outcomes.</span>
+              </p>
+            </div>
+          </div>
+
+          <div
+            className={`text-center transition-all duration-1000 delay-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            } bg-gradient-to-r from-blue-500/10 to-purple-600/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 sm:p-10`}
+          >
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Build Capability, Not Just Skills</h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
-              Contact us to discuss custom training programs tailored to your organization's needs.
+              Explore how we turn training into performance.
             </p>
-            <Button
-              size="lg"
-              className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer"
-            >
-              Enquire About Training
-              <ArrowRight />
-            </Button>
+            <Link href="/training">
+              <Button
+                size="lg"
+                className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer"
+              >
+                Start a Training Consultation
+                <ArrowRight />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

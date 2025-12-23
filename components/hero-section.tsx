@@ -59,48 +59,36 @@ export function HeroSection() {
 
         {/* Subheading */}
         <p className="text-base sm:text-xl md:text-2xl text-white text-balance max-w-sm sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 animate-fade-in-subheading font-light">
-          Devoryx delivers practical technology training, AI-driven automation, and dependable digital systems for
-          individuals, institutions, and businesses.
+          Devoryx delivers practical technology training, AI-driven automation, and dependable digital systems<br />
+          for individuals, institutions, and businesses.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-16 animate-fade-in-buttons">
-          <TransitionLink href="/development"
-            className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer relative overflow-hidden inline-flex items-center"
-          >
-            Start a Project
-            <ArrowRight />
-          </TransitionLink>
-
-          <TransitionLink href="/services"
-            className="rounded-full px-8 py-4 text-lg font-medium border border-white hover:bg-white/10 transition-all duration-200 hover:scale-105 group bg-transparent cursor-pointer inline-flex items-center text-white"
-          >
-            <Play />
-            Explore Our Capabilities
-          </TransitionLink>
-        </div>
+        
+        
 
         {/* Trust Indicators */}
         <div className="text-center px-4 hidden sm:block overflow-hidden animate-fade-in-trust">
-          <p className="text-sm text-white mb-6">Custom solutions scoped per project</p>
-          <div className="relative overflow-hidden w-full max-w-4xl mx-auto">
-            <div className="flex items-center gap-8 opacity-60 hover:opacity-80 transition-all duration-500 animate-slide-left">
-              <div className="flex items-center gap-8 whitespace-nowrap">
-                <div className="text-base sm:text-lg font-semibold">Web Development</div>
-                <div className="text-base sm:text-lg font-semibold">Mobile Apps</div>
-                <div className="text-base sm:text-lg font-semibold">AI Automation</div>
-                <div className="text-base sm:text-lg font-semibold">Training</div>
-                <div className="text-base sm:text-lg font-semibold">Digital Marketing</div>
-                <div className="text-base sm:text-lg font-semibold">Custom Systems</div>
-              </div>
-              {/* Duplicate for seamless loop */}
-              <div className="flex items-center gap-8 whitespace-nowrap">
-                <div className="text-base sm:text-lg font-semibold">Web Development</div>
-                <div className="text-base sm:text-lg font-semibold">Mobile Apps</div>
-                <div className="text-base sm:text-lg font-semibold">AI Automation</div>
-                <div className="text-base sm:text-lg font-semibold">Training</div>
-                <div className="text-base sm:text-lg font-semibold">Digital Marketing</div>
-                <div className="text-base sm:text-lg font-semibold">Custom Systems</div>
+          <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2">
+            <p className="text-sm text-white mb-6">Explore our range of custom solutions designed to meet your specific needs</p>
+            <div className="relative overflow-hidden w-full max-w-4xl mx-auto">
+              <div className="flex items-center gap-8 opacity-60 hover:opacity-80 transition-all duration-500 animate-slide-left">
+                <div className="flex items-center gap-8 whitespace-nowrap">
+                  <div className="text-base sm:text-lg font-semibold">Web Development</div>
+                  <div className="text-base sm:text-lg font-semibold">Mobile Apps</div>
+                  <div className="text-base sm:text-lg font-semibold">AI Automation</div>
+                  <div className="text-base sm:text-lg font-semibold">Training</div>
+                  <div className="text-base sm:text-lg font-semibold">Digital Marketing</div>
+                  <div className="text-base sm:text-lg font-semibold">Custom Systems</div>
+                </div>
+                {/* Duplicate for seamless loop */}
+                <div className="flex items-center gap-8 whitespace-nowrap">
+                  <div className="text-base sm:text-lg font-semibold">Web Development</div>
+                  <div className="text-base sm:text-lg font-semibold">Mobile Apps</div>
+                  <div className="text-base sm:text-lg font-semibold">AI Automation</div>
+                  <div className="text-base sm:text-lg font-semibold">Training</div>
+                  <div className="text-base sm:text-lg font-semibold">Digital Marketing</div>
+                  <div className="text-base sm:text-lg font-semibold">Custom Systems</div>
+                </div>
               </div>
             </div>
           </div>
@@ -108,45 +96,37 @@ export function HeroSection() {
 
         {/* Mobile Trust Indicators */}
         <div className="text-center px-4 mb-8 sm:hidden overflow-hidden animate-fade-in-trust">
-          <p className="text-sm text-white mb-6">Custom solutions scoped per project</p>
-          <div className="relative overflow-hidden w-full max-w-sm mx-auto">
-            {/* Left blur fade */}
-            <div className="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-            {/* Right blur fade */}
-            <div className="absolute right-0 top-0 w-8 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
-            <div className="flex items-center gap-6 opacity-60 animate-slide-left-mobile">
-              <div className="flex items-center gap-6 whitespace-nowrap">
-                <div className="text-sm font-semibold">Web Dev</div>
-                <div className="text-sm font-semibold">Mobile Apps</div>
-                <div className="text-sm font-semibold">AI Automation</div>
-                <div className="text-sm font-semibold">Training</div>
-                <div className="text-sm font-semibold">Marketing</div>
-                <div className="text-sm font-semibold">Custom Systems</div>
-              </div>
-              {/* Duplicate for seamless loop */}
-              <div className="flex items-center gap-6 whitespace-nowrap">
-                <div className="text-sm font-semibold">Web Dev</div>
-                <div className="text-sm font-semibold">Mobile Apps</div>
-                <div className="text-sm font-semibold">AI Automation</div>
-                <div className="text-sm font-semibold">Training</div>
-                <div className="text-sm font-semibold">Marketing</div>
-                <div className="text-sm font-semibold">Custom Systems</div>
+          <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2">
+            <p className="text-sm text-white mb-6">Explore our range of custom solutions designed to meet your specific needs</p>
+            <div className="relative overflow-hidden w-full max-w-sm mx-auto">
+              {/* Left blur fade */}
+              <div className="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
+              {/* Right blur fade */}
+              <div className="absolute right-0 top-0 w-8 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+              <div className="flex items-center gap-6 opacity-60 animate-slide-left-mobile">
+                <div className="flex items-center gap-6 whitespace-nowrap">
+                  <div className="text-sm font-semibold">Web Dev</div>
+                  <div className="text-sm font-semibold">Mobile Apps</div>
+                  <div className="text-sm font-semibold">AI Automation</div>
+                  <div className="text-sm font-semibold">Training</div>
+                  <div className="text-sm font-semibold">Marketing</div>
+                  <div className="text-sm font-semibold">Custom Systems</div>
+                </div>
+                {/* Duplicate for seamless loop */}
+                <div className="flex items-center gap-6 whitespace-nowrap">
+                  <div className="text-sm font-semibold">Web Dev</div>
+                  <div className="text-sm font-semibold">Mobile Apps</div>
+                  <div className="text-sm font-semibold">AI Automation</div>
+                  <div className="text-sm font-semibold">Training</div>
+                  <div className="text-sm font-semibold">Marketing</div>
+                  <div className="text-sm font-semibold">Custom Systems</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Hero Image */}
-        <div className="mt-16 relative z-10 animate-fade-in-hero">
-          <Image
-            src="/images/HomePage.png"
-            alt="Devoryx Services"
-            width={700}
-            height={400}
-            className="w-full max-w-2xl mx-auto rounded-2xl shadow-2xl"
-            priority
-          />
-        </div>
+        
       </div>
     </section>
   )

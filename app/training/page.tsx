@@ -150,6 +150,15 @@ export default function TrainingPage() {
       ],
     },
     {
+      title: "Induction & Onboarding",
+      subtitle: "Revenue & Relationship Focused",
+      items: [
+        "Role clarity and performance alignment",
+        "Culture, policies, and ways of working",
+        "Tools, processes, and compliance overview",
+      ],
+    },
+    {
       title: "Technical & Digital Skills",
       subtitle: "Non-Coding • Practical Tools",
       items: [

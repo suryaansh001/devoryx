@@ -1,7 +1,9 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { MessageCircle, Clock, Zap, CheckCircle } from "lucide-react"
+import Link from "next/link"
+import { MessageCircle, Clock, Zap, CheckCircle, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const conversations = [
   {
@@ -184,15 +186,18 @@ export function AITeamSection() {
   return (
     <section id="ai-team" ref={sectionRef} className="relative z-10 py-16 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-8 sm:p-12 md:p-16">
+        <div className="relative z-10 bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-8 sm:p-12 md:p-16 overflow-hidden">
+          {/* Background gradient glow */}
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
           <div className="text-center mb-16">
             <div
-              className={`inline-flex items-center gap-2 bg-slate-50 border border-slate-200 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6 transition-all duration-1000 ${
+              className={`inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-white/20 text-white px-5 py-2.5 rounded-full text-sm font-medium mb-6 transition-all duration-1000 backdrop-blur-sm shadow-lg shadow-blue-500/5 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <MessageCircle className="w-4 h-4" />
-              AI & Automation Demo
+              <MessageCircle className="w-4 h-4 text-blue-400" />
+              AI & ML Solutions
             </div>
 
             <h2
@@ -200,10 +205,7 @@ export function AITeamSection() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Automation That{" "}
-              <span className="bg-gradient-to-r from-white/80 to-white/60 bg-clip-text text-transparent">
-                Fits Your Business
-              </span>
+              End-to-End AI & ML Solutions
             </h2>
 
             <p
@@ -211,69 +213,105 @@ export function AITeamSection() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              We design automation systems that integrate smoothly into existing workflows instead of disrupting them.
-              Our focus is on reducing manual effort while maintaining clarity and control.
+              Built to solve real business problems—not run experiments.<br />
+              We design and deploy production-grade AI systems that turn data into decisions and automation into impact.
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20 max-w-7xl mx-auto mb-8">
             {/* Left side - Text content */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center lg:h-[600px] space-y-6 lg:space-y-8 order-2 lg:order-1">
+            <div className="w-full lg:w-1/2 flex flex-col justify-start space-y-6 lg:space-y-8 order-2 lg:order-1">
               <div
                 className={`transition-all duration-1000 delay-600 ${
                   isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
                 }`}
               >
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6">Our Automation Process</h3>
+              <div className="rounded-2xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-6 lg:p-8 mb-8 shadow-xl shadow-black/10 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:border-blue-400/30 group">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6 flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                    <Zap className="w-5 h-5 text-white" />
+                  </span>
+                  What We Deliver
+                </h3>
 
-              <div className="space-y-3 lg:space-y-4 text-base lg:text-lg text-white leading-relaxed">
+                <div className="space-y-3 lg:space-y-4 text-base lg:text-lg text-white/90 leading-relaxed">
                   <div className="flex items-start gap-3">
-                    <CheckCircle />
-                    <p>Capture data</p>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <p>AI strategy aligned to business goals</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle />
-                    <p>Verify inputs</p>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <p>Machine learning & predictive models</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle />
-                    <p>Automate workflows</p>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <p>Computer vision & language systems</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle />
-                    <p>Notify stakeholders</p>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <p>Intelligent automation & AI agents</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CheckCircle />
-                    <p>Scale efficiently</p>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <p>Scalable deployment, monitoring, and control</p>
                   </div>
                 </div>
               </div>
 
-              <div
-                className={`transition-all duration-1000 delay-800 ${
-                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
-                }`}
-              >
-                <div className="p-4 lg:p-6 bg-white/5 rounded-xl border-l-4 border-white backdrop-blur-md">
-                  <p className="text-white font-medium text-sm lg:text-base">
-                    "Devoryx built an automation system that reduced our manual data entry by 80%. The scope was clear,
-                    the timeline was met, and the system just works."
-                  </p>
-                  <p className="text-xs lg:text-sm text-gray-300 mt-2">— Sarah Chen, Operations Manager</p>
+              
+
+              <div className="rounded-2xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-6 lg:p-8 mb-8 shadow-xl shadow-black/10 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:border-purple-400/30 group">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6 flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </span>
+                  Why It Works
+                </h3>
+
+                <div className="space-y-3 lg:space-y-4 text-base lg:text-lg text-white/90 leading-relaxed">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Built around real workflows</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Integrated with your existing systems</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Measurable outcomes, not demos</p>
+                  </div>
                 </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/20 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 backdrop-blur-md p-6 lg:p-8 mb-8">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6 flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/30">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </span>
+                  The Outcome
+                </h3>
+                <div className="flex flex-wrap gap-4">
+                  <span className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white font-medium text-sm">⚡ Faster operations</span>
+                  <span className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white font-medium text-sm">✓ Fewer errors</span>
+                  <span className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white font-medium text-sm">🧠 Smarter decisions</span>
+                  <span className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white font-medium text-sm">📈 AI that pays for itself</span>
+                </div>
+              </div>
               </div>
             </div>
 
             {/* Right side - Phone mockup */}
-            <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
+            <div className="w-full lg:w-1/2 flex justify-center lg:justify-start order-1 lg:order-2">
               <div className="max-w-md w-full">
                 <div
-                  className={`relative transition-all duration-1000 delay-600 ${
+                  className={`relative transition-all duration-1000 delay-600 flex-shrink-0 ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
                 >
-                  <div className="bg-slate-900 rounded-[2.5rem] p-2 shadow-2xl">
+                  <div className="bg-slate-900 rounded-[2.5rem] p-2 shadow-2xl shadow-blue-500/20 ring-1 ring-white/10">
                     <div className="bg-black rounded-[2rem] p-1">
                       <div className="bg-white rounded-[1.5rem] overflow-hidden">
                         {/* Status bar */}
@@ -305,7 +343,7 @@ export function AITeamSection() {
                         {/* Chat messages */}
                         <div
                           ref={chatContainerRef}
-                          className="h-96 overflow-y-scroll scrollbar-hide p-4 space-y-3 bg-slate-50"
+                          className="h-[700px] overflow-y-scroll scrollbar-hide p-4 space-y-3 bg-slate-50"
                           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                         >
                           {displayedMessages.map((message, index) => (
@@ -368,6 +406,32 @@ export function AITeamSection() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section - Full Width */}
+          <div
+            className={`transition-all duration-1000 delay-800 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="rounded-2xl border border-white/20 bg-gradient-to-br from-blue-500/20 via-purple-500/15 to-pink-500/20 p-8 backdrop-blur-sm relative overflow-hidden group hover:border-white/30 transition-all duration-500 w-full">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-3">Build AI That Actually Works</h3>
+                <p className="text-white/70 mb-6">
+                  Turn intelligence into advantage.
+                </p>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    className="bg-white text-black rounded-full px-8 py-4 text-lg font-semibold transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-xl hover:shadow-white/20 w-full border-0 group cursor-pointer"
+                  >
+                    Start Your AI Project
+                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

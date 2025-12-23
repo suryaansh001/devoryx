@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import SpotlightCard from "./SpotlightCard"
 
 const AnimatedChatDemo = ({ isActive }: { isActive: boolean }) => {
@@ -485,6 +487,24 @@ export function FeaturesSection() {
                 </SpotlightCard>
               </div>
             ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 text-center">
+            <div className="inline-block rounded-2xl border border-white/20 bg-gradient-to-r from-blue-500/10 to-purple-600/10 p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-white mb-3">Explore Our Full Range of Services</h3>
+              <p className="text-white/70 mb-6 max-w-2xl">
+                Each service is scoped clearly and tailored to your specific business requirements.
+              </p>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg"
+                >
+                  Get a Custom Quote
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
