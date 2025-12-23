@@ -19,7 +19,7 @@ export default function HomePage() {
         <div className="relative z-10">
           <GlassmorphismNav />
           <HeroSection />
-          <ProblemSolutionSection />
+          
           <FeaturesSection />
           <AITeamSection />
           <TrainingSection />

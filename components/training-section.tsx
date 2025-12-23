@@ -133,13 +133,7 @@ export function TrainingSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
             } text-center`}
           >
-            <div className="inline-block rounded-2xl border border-white/20 bg-white/5 p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-3">Why Partner With Us</h3>
-              <p className="text-white/80 leading-relaxed text-lg">
-                Training with measurable impact, structured methodology,<br />
-                <span className="font-semibold text-white">and results that drive business outcomes.</span>
-              </p>
-            </div>
+            
           </div>
 
           <div
@@ -149,14 +143,14 @@ export function TrainingSection() {
           >
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Build Capability, Not Just Skills</h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
-              Explore how we turn training into performance.
+              
             </p>
             <Link href="/training">
               <Button
                 size="lg"
                 className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer"
               >
-                Start a Training Consultation
+               Explore how we turn training into performance
                 <ArrowRight />
               </Button>
             </Link>

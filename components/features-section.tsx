@@ -364,40 +364,46 @@ const AnimatedIntegrationsDemo = ({ isActive }: { isActive: boolean }) => {
 
 const features = [
   {
-    title: "Website Development",
-    description: "Business websites, dashboards, and dynamic platforms designed for clarity and performance.",
+    title: "Web & Mobile Development",
+    description: "Modern, responsive websites and mobile apps built with clean code. We create digital systems for websites, internal dashboards, and iOS/Android applications with a focus on performance, maintainability, and usability.",
     demo: AnimatedChatDemo,
     size: "large",
+    href: "/development",
   },
   {
-    title: "Mobile App Development",
-    description: "Android and iOS applications focused on MVPs and practical business use.",
-    demo: AnimatedPhoneDemo,
-    size: "medium",
-  },
-  {
-    title: "Custom Web Systems",
-    description: "Internal tools, dashboards, and workflow-driven applications.",
-    demo: AnimatedCalendarDemo,
-    size: "medium",
-  },
-  {
-    title: "AI Chatbots",
-    description: "Website-based chatbots for lead capture, support, and automation.",
+    title: "AI & ML Solutions",
+    description: "Custom machine learning models and intelligent automation. AI-powered data analysis, 24/7 chatbots, workflow automation, lead qualification systems, and predictive analytics tailored to your business needs.",
     demo: AnimatedEmailDemo,
     size: "large",
+    href: "/ai-automation",
   },
   {
-    title: "Workflow Automation",
-    description: "Automation pipelines connecting forms, databases, and notifications.",
+    title: "Intelligent Automation Systems",
+    description: "End-to-end automation pipelines that connect your business tools. From form submissions to notifications, database integrations to workflow triggers—we build systems that work 24/7 without manual intervention.",
     demo: AnimatedLeadsDemo,
-    size: "medium",
+    size: "large",
+    href: "/ai-automation",
   },
   {
-    title: "Digital Marketing",
-    description: "Social media management, SEO setup, and paid ad execution — without unrealistic growth promises.",
+    title: "Billing & Internal Software Solutions",
+    description: "Custom billing systems, invoicing platforms, and internal tools built for your exact workflow. Scalable solutions for payment processing, subscription management, and operational efficiency.",
+    demo: AnimatedCalendarDemo,
+    size: "large",
+    href: "/development",
+  },
+  {
+    title: "SEO & Digital Growth Enablement",
+    description: "Strategic SEO setup, organic growth optimization, and digital marketing execution. We help you reach the right audience through search, content strategy, and data-driven growth initiatives.",
     demo: AnimatedIntegrationsDemo,
-    size: "medium",
+    size: "large",
+    href: "/services",
+  },
+  {
+    title: "Training & Consulting",
+    description: "Expert guidance on AI implementation, development practices, and digital transformation. We provide hands-on training, team enablement, workshops, and role-specific upskilling to maximize ROI on technology investments.",
+    demo: AnimatedPhoneDemo,
+    size: "large",
+    href: "/training",
   },
 ]
 
@@ -410,7 +416,6 @@ export function FeaturesSection() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          console.log("[v0] Features Section is now visible")
           setIsVisible(true)
         }
       },
@@ -460,21 +465,22 @@ export function FeaturesSection() {
           </div>
 
           <div
-            className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 transition-all duration-1000 delay-300 ${
+            className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
             }`}
           >
             {features.map((feature, index) => (
-              <div
+              <Link
                 key={index}
-                className={`group transition-all duration-1000 ${feature.size === "large" ? "md:col-span-2" : ""}`}
+                href={feature.href}
+                className={`group transition-all duration-1000`}
                 style={{
                   transitionDelay: isVisible ? `${300 + index * 100}ms` : "0ms",
                 }}
                 onMouseEnter={() => setActiveDemo(index)}
                 onMouseLeave={() => setActiveDemo(null)}
               >
-                <SpotlightCard className="rounded-2xl p-6 sm:p-8 h-full">
+                <SpotlightCard className="rounded-2xl p-6 sm:p-8 h-full cursor-pointer transition-all duration-300 border-2 border-white group-hover:border-white/80">
                   <div className="mb-6">
                     <feature.demo isActive={activeDemo === index || isVisible} />
                   </div>
@@ -485,7 +491,7 @@ export function FeaturesSection() {
 
                   <p className="text-gray-200 text-sm sm:text-base leading-relaxed">{feature.description}</p>
                 </SpotlightCard>
-              </div>
+              </Link>
             ))}
           </div>
 

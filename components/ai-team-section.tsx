@@ -423,12 +423,12 @@ export function AITeamSection() {
                 <p className="text-white/70 mb-6">
                   Turn intelligence into advantage.
                 </p>
-                <Link href="/contact">
+                <Link href="/ai-automation">
                   <Button
                     size="lg"
                     className="bg-white text-black rounded-full px-8 py-4 text-lg font-semibold transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-xl hover:shadow-white/20 w-full border-0 group cursor-pointer"
                   >
-                    Start Your AI Project
+                    Explore how we turn AI into business impact
                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>

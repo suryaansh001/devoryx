@@ -40,18 +40,18 @@ export default function TrainingPage() {
 
   const trainingBenefits = [
     {
-      title: "Work Faster",
-      description: "Teams operate with greater efficiency and reduced learning time.",
+      title: "Work More Efficiently",
+      description: "Apply tools correctly within daily workflows and operational processes.",
       icon: <Zap className="w-8 h-8 text-blue-400" />,
     },
     {
-      title: "Make Fewer Mistakes",
-      description: "Prevent costly errors through standardized usage patterns.",
+      title: "Reduce Errors & Rework",
+      description: "Follow correct usage patterns, best practices, and standard processes.",
       icon: <CheckCircle className="w-8 h-8 text-green-400" />,
     },
     {
-      title: "Reduce Support Burden",
-      description: "Teams depend less on support and senior members for guidance.",
+      title: "Lower Support & Dependency",
+      description: "Handle tasks independently with confidence and consistency.",
       icon: <Users className="w-8 h-8 text-purple-400" />,
     },
   ]
@@ -248,10 +248,10 @@ export default function TrainingPage() {
                 <p className="text-sm font-medium text-white/80">Product Training That Works</p>
               </div>
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
-                Make Your Product <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Actually Work</span>
+                Make Your Workforce <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Perform</span>
               </h1>
               <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
-                We don't explain features — we train people on how the product is actually used in daily workflows.
+                We design and deliver practical training solutions that enable teams to apply tools, systems, and processes effectively in real business workflows — not just understand features.
               </p>
             </div>
           </section>
@@ -274,10 +274,10 @@ export default function TrainingPage() {
               <div className="rounded-3xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-8 sm:p-12 backdrop-blur-sm">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About Our Product Training</h2>
                 <p className="text-lg text-white/80 leading-relaxed mb-4">
-                  At Devoryx, product training is about making teams operational. We focus on practical, real-world application rather than theory or feature lists.
+                  At Devoryx, product training is a business enablement function. We focus on making teams operational, consistent, and execution-ready across real workflows.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed">
-                  Our training ensures teams can execute without guessing. The outcome: <span className="font-semibold text-white">teams stop guessing and start executing.</span>
+                  Our approach reduces misuse, rework, and dependency on support by ensuring teams understand how the product is meant to be used in practice. The result is faster adoption, predictable performance, and stronger ROI on product investments.
                 </p>
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function TrainingPage() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">Our Training Domains</h2>
               <p className="text-lg text-white/70 text-center mb-16 max-w-3xl mx-auto">
-                We offer comprehensive training across 10 key areas, from behavioral skills to consulting services. Each domain is designed to drive measurable business outcomes.
+                Our training spans key organizational capabilities, enabling leaders to build skilled, execution-ready teams aligned to business priorities.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">

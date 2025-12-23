@@ -11,7 +11,7 @@ const navigation = [
   { name: "Training & Consultation", href: "/training" },
   { name: "AI & Automation", href: "/ai-automation" },
   { name: "Development", href: "/development" },
-  { name: "Other Services", href: "/services" },
+  { name: "Micro Services", href: "/services" },
   //{ name: "Contact", href: "/contact" },
 ]
 
