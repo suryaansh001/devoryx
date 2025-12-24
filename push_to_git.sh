@@ -2,7 +2,7 @@
 
 # Check if remote origin exists, if not add it
 if ! git remote get-url origin &>/dev/null; then
-  git remote add origin https://github.com/suryaansh001/devoryx.git
+  git remote add origin https://github.com/suryaansh001/erebor.git
 fi
 
 # Add all files to staging area

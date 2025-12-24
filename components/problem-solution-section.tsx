@@ -80,7 +80,7 @@ export function ProblemSolutionSection() {
             Building Systems Meant to Be Used
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
-            Devoryx is a focused technology team delivering websites, applications, automation, and training with a
+            Erebor is a focused technology team delivering websites, applications, automation, and training with a
             clear emphasis on well-defined scope and reliable execution. We build systems meant to be used, scaled, and
             maintained — not just showcased.
           </p>
@@ -92,14 +92,14 @@ export function ProblemSolutionSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          {/* Why Work With Devoryx Card */}
+          {/* Why Work With Erebor Card */}
           <div className="group lg:col-span-2">
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 sm:p-8 h-full hover:bg-white/10 transition-all duration-500 hover:border-white/30">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2 rounded-lg bg-white/20">
                   <CheckCircle />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">Why Work With Devoryx</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Why Work With Erebor</h3>
               </div>
 
               {/* Solution Points */}
@@ -133,8 +133,8 @@ export function ProblemSolutionSection() {
           </div>
         </div>
 
-        {/* Stats Row - Hidden for Devoryx */}
-        <div className="hidden">{/* Stats removed as not needed for Devoryx content */}</div>
+        {/* Stats Row - Hidden for Erebor */}
+        <div className="hidden">{/* Stats removed as not needed for Erebor content */}</div>
 
         {/* CTA Section */}
         <div

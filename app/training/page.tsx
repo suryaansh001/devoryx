@@ -261,7 +261,7 @@ export default function TrainingPage() {
               <div className="rounded-3xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-8 sm:p-12 backdrop-blur-sm">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About Our Product Training</h2>
                 <p className="text-lg text-white/80 leading-relaxed mb-4">
-                  At Devoryx, product training is a business enablement function. We focus on making teams operational, consistent, and execution-ready across real workflows.
+                  At Erebor, product training is a business enablement function. We focus on making teams operational, consistent, and execution-ready across real workflows.
                 </p>
                 <p className="text-lg text-white/80 leading-relaxed">
                   Our approach reduces misuse, rework, and dependency on support by ensuring teams understand how the product is meant to be used in practice. The result is faster adoption, predictable performance, and stronger ROI on product investments.

@@ -1,4 +1,4 @@
-# Devoryx - AI & ML Solutions
+# Erebor - AI & ML Solutions
 
 > **Your Data. Your Requirements. Our Solution.**
 
@@ -6,7 +6,7 @@ A modern, full-stack web application built with Next.js 14, showcasing AI & ML s
 
 ## 🚀 Overview
 
-Devoryx is a technology solutions company specializing in AI & ML implementations. This project serves as our digital presence, featuring:
+Erebor is a technology solutions company specializing in AI & ML implementations. This project serves as our digital presence, featuring:
 
 - **AI & ML Solutions**: Custom machine learning models and intelligent automation
 - **Web Development**: Modern web applications and systems
@@ -39,7 +39,7 @@ Devoryx is a technology solutions company specializing in AI & ML implementation
 ## 📁 Project Structure
 
 ```
-devoryx/
+erebor/
 ├── app/                          # Next.js App Router
 │   ├── ai-automation/           # AI & ML Solutions page
 │   ├── contact/                 # Contact page
@@ -103,7 +103,7 @@ devoryx/
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd devoryx
+   cd erebor
    ```
 
 2. **Install dependencies**
@@ -259,7 +259,7 @@ pnpm start
 
 ## 📄 License
 
-This project is private and proprietary to Devoryx.
+This project is private and proprietary to Erebor.
 
 ## 📞 Support
 
@@ -270,7 +270,7 @@ For questions or support:
 
 ---
 
-**Built with ❤️ by Devoryx Team**
+**Built with ❤️ by Erebor Team**
 
 *Transforming businesses with AI & ML solutions since 2024*</content>
 <parameter name="filePath">/home/suri/proj/devoryx/README.md

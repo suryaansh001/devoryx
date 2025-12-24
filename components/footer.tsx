@@ -22,8 +22,9 @@ const footerLinks: FooterSection[] = [
     links: [
       { title: "Website Development", href: "#features" },
       { title: "Mobile Apps", href: "#features" },
-      { title: "AI Chatbots", href: "#ai-team" },
+      { title: "AI", href: "#ai-team" },
       { title: "Workflow Automation", href: "#ai-team" },
+      { title: "Training", href: "#training" },
     ],
   },
   {
@@ -31,13 +32,13 @@ const footerLinks: FooterSection[] = [
     links: [
       { title: "Training", href: "#training" },
       { title: "Contact", href: "#contact" },
-      { title: "devoryx.xyz", href: "https://devoryx.xyz" },
+      { title: "erebor.world", href: "https://erebor.world" },
     ],
   },
   {
     label: "Connect",
     links: [
-      { title: "Email", href: "mailto:hello@devoryx.xyz" },
+      { title: "Email", href: "mailto:hello@erebor.world" },
       { title: "WhatsApp", href: "https://wa.me/" },
     ],
   },
@@ -57,10 +58,10 @@ export function Footer() {
 
       <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
-          <Image src="/images/cliste-logo.png" alt="Devoryx Logo" width={64} height={64} className="size-16" />
+          <Image src="/images/cliste-logo.png" alt="Erebor Logo" width={64} height={64} className="size-16" />
           <div className="text-muted-foreground mt-8 text-sm md:mt-0 md:block hidden">
-            <p>© {new Date().getFullYear()} Devoryx</p>
-            <p className="mt-2">devoryx.xyz</p>
+            <p>© {new Date().getFullYear()} Erebor</p>
+            <p className="mt-2">erebor.world</p>
             <p className="mt-2 text-xs">Custom solutions scoped per project</p>
           </div>
         </AnimatedContainer>
@@ -90,13 +91,13 @@ export function Footer() {
       </div>
 
       <div className="md:hidden mt-8 text-center space-y-2">
-        <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} Devoryx</p>
-        <p className="text-muted-foreground text-xs">devoryx.xyz</p>
+        <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} Erebor</p>
+        <p className="text-muted-foreground text-xs">erebor.world</p>
         <p className="text-muted-foreground text-xs">Custom solutions scoped per project</p>
       </div>
 
       <div className="hidden md:block mt-8 pt-6 border-t border-foreground/10 w-full">
-        <p className="text-muted-foreground text-xs text-center">C   project</p>
+        <p className="text-muted-foreground text-xs text-center">Custom solutions scoped per project</p>
       </div>
     </footer>
   )

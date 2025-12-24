@@ -18,9 +18,9 @@ const caveat = Caveat({
 })
 
 export const metadata: Metadata = {
-  title: "Devoryx - Engineering Digital Systems That Work",
+  title: "Erebor - Engineering Digital Systems That Work",
   description:
-    "Devoryx builds digital products, automation systems, and intelligent workflows designed for real business needs — with a strong focus on clarity, execution, and scalability.",
+    "Erebor builds digital products, automation systems, and intelligent workflows designed for real business needs — with a strong focus on clarity, execution, and scalability.",
   generator: "suryaansh.app",
   icons: {
     icon: "/images/logo.ico",

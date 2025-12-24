@@ -37,14 +37,14 @@ export function HeroSection() {
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-8 mt-12 animate-fade-in-badge">
           <span className="w-2 h-2 bg-white/60 rounded-full mr-2 animate-pulse"></span>
-          devoryx.xyz
+          erebor.world
         </div>
 
         {/* Main Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-balance mb-6 animate-fade-in-heading">
 
           <span className="text-foreground">
-            Devoryx Provides Solutions
+            Erebor Provides Solutions
             <br />
             Built with 
             <span className="ml-3 px-6 py-2 bg-white text-black rounded-lg inline-block font-bold">
@@ -59,7 +59,7 @@ export function HeroSection() {
 
         {/* Subheading */}
         <p className="text-base sm:text-xl md:text-2xl text-white text-balance max-w-sm sm:max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0 animate-fade-in-subheading font-light">
-          Devoryx delivers practical technology training, AI-driven automation, and dependable digital systems<br />
+          Erebor delivers practical technology training, AI-driven automation, and dependable digital systems<br />
           for individuals, institutions, and businesses.
         </p>
 

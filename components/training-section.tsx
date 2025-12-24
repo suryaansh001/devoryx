@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
-import { GraduationCap } from "lucide-react"
+import { GraduationCap, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import SpotlightCard from "./SpotlightCard"
 
@@ -133,7 +133,13 @@ export function TrainingSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
             } text-center`}
           >
-            
+            <div className="inline-block bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <MessageCircle className="w-6 h-6 text-blue-400" />
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Training and Consultation</h3>
+              </div>
+              <p className="text-white/70 text-sm sm:text-base">Expert guidance tailored to your team's needs</p>
+            </div>
           </div>
 
           <div

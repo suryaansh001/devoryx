@@ -4,8 +4,8 @@ import Aurora from "@/components/Aurora"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "Contact Us - Devoryx",
-  description: "Get in touch with Devoryx. Let's discuss your project and how we can help you succeed.",
+  title: "Contact Us - Erebor",
+  description: "Get in touch with Erebor. Let's discuss your project and how we can help you succeed.",
 }
 
 export default function ContactPage() {

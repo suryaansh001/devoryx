@@ -105,7 +105,7 @@ export function ContactForm() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
-          to_email: "your-email@devoryx.com", // Change this to your email
+          to_email: "your-email@erebor.world", // Change this to your email
           from_name: formData.name,
           from_email: formData.email,
           company: formData.company || "Not provided",
