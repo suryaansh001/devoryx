@@ -1,0 +1,71 @@
+# Erebor - Digital Solutions & Consultancy
+
+> Affordable web development, mobile app development, AI & ML solutions, automation systems, corporate training, and billing software.
+
+## About Erebor
+
+Erebor is a technology consultancy that builds digital products, automation systems, and intelligent workflows designed for real business needs. We focus on clarity, execution, and scalability with transparent pricing.
+
+### What Makes Us Different
+- Custom solutions scoped per project
+- No templates, no forced platforms
+- Affordable rates for startups and enterprises
+- Production-ready systems, not demos
+
+## Services
+
+### Web & Mobile Development
+- Website Development: Modern, responsive websites built with clean code
+- Mobile App Development: iOS and Android apps built for real users
+- Custom Web Systems: Tailored web applications for specific business needs
+- Internal Dashboards & Tools: Purpose-built tools for operations
+
+### AI & Automation Solutions
+- Workflow & Process Automation: Approval flows, task routing, escalations
+- Lead Capture & Qualification: Intent detection, scoring, CRM integration
+- Conversational Assistants: Customer support bots, internal assistants
+- Document & Data Intelligence: Processing, extraction, automated workflows
+- Predictive & Decision Support: Risk forecasting, scoring, prioritization
+- Tender Discovery & Management: Automated tender monitoring and compliance
+
+### Corporate Training
+- Product Training: End-to-end workflows, role-based usage
+- Leadership Development: Management skills, delegation, coaching
+- Communication Training: Business communication, presentations
+- Onboarding Programs: New hire productivity acceleration
+- Capability Building: Measurable performance improvement
+
+### Additional Services
+- Digital Marketing: Social media, ad campaigns, performance tracking
+- SEO Services: Technical SEO, on-page optimization, site structure
+- Billing Software: Open-source billing system setup and customization
+
+## Pricing
+
+Erebor offers competitive, transparent pricing:
+- No hidden costs
+- No markup on ad spend (digital marketing)
+- Per-project scoping
+- Flexible engagement models
+
+## Contact
+
+- Website: https://erebor.world
+- Email: hello@erebor.world
+- Location: Available globally, based in India
+
+## Target Audience
+
+- Startups needing affordable technology solutions
+- SMBs requiring web/mobile applications
+- Enterprises looking for automation and AI integration
+- Companies needing corporate training programs
+- Businesses requiring billing software setup
+
+## Key Differentiators
+
+1. **Affordable**: Competitive rates without compromising quality
+2. **Production-Ready**: Systems built for real use, not demos
+3. **Transparent**: Clear scope, clear pricing, clear deliverables
+4. **Full-Service**: From development to training to automation
+5. **No Lock-in**: Open-source solutions, full data control

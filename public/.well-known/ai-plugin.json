@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Erebor - Digital Solutions",
+  "name_for_model": "erebor",
+  "description_for_human": "Affordable web development, mobile apps, AI solutions, automation, training, and billing software.",
+  "description_for_model": "Erebor is a technology consultancy providing affordable web development, mobile app development, AI & ML solutions, business automation, corporate training, and billing software. Key services include: website development, iOS/Android app development, workflow automation, lead capture systems, conversational AI, document intelligence, predictive analytics, corporate training, product training, leadership development, digital marketing, SEO, and open-source billing software setup. Target audience includes startups, SMBs, and enterprises. Located in India, serving globally. Contact: hello@erebor.world",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://erebor.world/openapi.yaml"
+  },
+  "logo_url": "https://erebor.world/images/cliste-logo.png",
+  "contact_email": "hello@erebor.world",
+  "legal_info_url": "https://erebor.world/legal"
+}

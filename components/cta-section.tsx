@@ -44,10 +44,10 @@ export function CTASection() {
             Share your requirement and we'll respond with clarity — no pressure and no unnecessary upselling.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="group inline-flex items-center gap-3 px-8 py-4 md:px-12 md:py-6 bg-gradient-to-r from-white to-slate-100 text-slate-900 rounded-full font-semibold text-base md:text-lg hover:from-slate-50 hover:to-slate-200 transition-all duration-300 hover:scale-105 shadow-2xl">
+          <div className="flex flex-col items-center justify-center gap-4 px-4">
+            <button className="group inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 md:px-12 md:py-6 bg-gradient-to-r from-white to-slate-100 text-slate-900 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:from-slate-50 hover:to-slate-200 transition-all duration-300 hover:scale-105 shadow-2xl w-full sm:w-auto justify-center">
               Get in Touch
-              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform duration-200" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform duration-200" />
             </button>
           </div>
         </div>

@@ -2,10 +2,35 @@ import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { ContactForm } from "@/components/contact-form"
 import Aurora from "@/components/Aurora"
 import { Footer } from "@/components/footer"
+import { Metadata } from "next"
 
-export const metadata = {
-  title: "Contact Us - Erebor",
-  description: "Get in touch with Erebor. Let's discuss your project and how we can help you succeed.",
+export const metadata: Metadata = {
+  title: "Contact Us - Get a Free Consultation | Erebor",
+  description: "Get in touch with Erebor for web development, mobile apps, AI solutions, automation, or training. Free consultation. Quick response within 24 hours. Affordable rates for startups and enterprises.",
+  keywords: [
+    "contact Erebor",
+    "free consultation",
+    "web development quote",
+    "app development inquiry",
+    "AI consultancy",
+    "training consultation",
+    "get in touch",
+    "project inquiry"
+  ],
+  openGraph: {
+    title: "Contact Erebor - Free Consultation",
+    description: "Get in touch for web development, mobile apps, AI solutions, automation, or training. Free consultation.",
+    url: "https://erebor.world/contact",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Erebor - Free Consultation",
+    description: "Get in touch for web development, mobile apps, AI solutions, automation, or training.",
+  },
+  alternates: {
+    canonical: "https://erebor.world/contact",
+  },
 }
 
 export default function ContactPage() {
