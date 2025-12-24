@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Megaphone, DollarSign } from "lucide-react"
+import { Megaphone, DollarSign, Search } from "lucide-react"
 import SpotlightCard from "@/components/SpotlightCard"
 import Aurora from "@/components/Aurora"
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
@@ -40,13 +40,19 @@ export default function ServicesPage() {
       icon: Megaphone,
       title: "Digital Marketing",
       description:
-        "Social media management, SEO setup, and paid ad execution (client-funded). We handle the technical aspects while you focus on your core business.",
+        "We handle execution, not guesswork. Our digital marketing service focuses on setting up and managing the technical backbone required for consistent online visibility and lead flow. This includes social media setup, ad account configuration, campaign execution, and performance tracking. We work closely with your team to align campaigns with business goals — not just likes or impressions. Ad spend is client-funded. We don't mark up media costs. You get full transparency on performance, spend, and results.",
+    },
+    {
+      icon: Search,
+      title: "SEO",
+      description:
+        "We provide practical SEO setup and optimization designed to build a strong long-term foundation. This is not keyword stuffing or overnight ranking promises. Our focus is on on-page optimization, technical SEO hygiene, site structure, performance improvements, and content alignment with search intent. We ensure your website is search-engine ready and scalable as your business grows. SEO is a process, not a switch. We set it up right so it compounds over time.",
     },
     {
       icon: DollarSign,
       title: "Billing Software (Open-Source)",
       description:
-        "Setup, customization, and training for open-source billing and invoicing tools. Get your invoicing system running efficiently with our support.",
+        "We help businesses deploy and customize open-source billing and invoicing software tailored to their operational needs. Our service includes setup, customization, workflow alignment, and team training. You retain full control over your data with no vendor lock-in or recurring license fees. Ideal for startups, service businesses, and growing teams that need a reliable billing system without paying for bloated SaaS tools.",
     },
   ]
 
@@ -87,7 +93,6 @@ export default function ServicesPage() {
       <section ref={sectionRef} className="py-16 sm:py-24 px-4">
         <div className="max-w-6xl mx-auto">
 
-          
           <div
             className={`grid md:grid-cols-2 gap-8 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"

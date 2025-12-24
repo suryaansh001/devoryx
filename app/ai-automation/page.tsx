@@ -36,45 +36,45 @@ export default function AIMlSolutionsPage() {
     }
   }, [])
 
-  const automationServices = [
+  const solutionsWeBuild = [
     {
-      icon: Database,
-      title: "AI-Powered Data Analysis",
-      description: "Transform raw data into actionable insights with machine learning algorithms.",
-    },
-    {
-      icon: Brain,
-      title: "Custom ML Models",
-      description: "Build and deploy tailored machine learning solutions for your specific business needs.",
-    },
-    {
-      icon: MessageCircle,
-      title: "Intelligent Automation",
-      description: "24/7 AI chatbots and workflow automation that learns from your operations.",
+      icon: CheckCircle,
+      title: "Tender Discovery & Management Automation",
+      description: "End-to-end systems for government and enterprise tenders. Automated tender discovery across portals and sources, filtering based on eligibility, value, location, and deadlines. Centralized dashboards with alerts, deadline tracking, and compliance checklists.",
     },
     {
       icon: Zap,
-      title: "Process Optimization",
-      description: "Streamline workflows using AI predictions and automated decision-making.",
+      title: "Workflow & Process Automation",
+      description: "Execution systems that remove follow-ups and handoffs. Approval flows, task routing, escalations, SLAs, and audit trails. System-driven status updates.",
     },
     {
       icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast trends and opportunities before they happen with advanced ML.",
+      title: "Lead Capture & Qualification Systems",
+      description: "Automation that ensures sales teams engage only with real prospects. Intent detection from forms and conversations, automated verification, scoring, routing, and CRM updates without manual effort.",
     },
     {
-      icon: CheckCircle,
-      title: "Lead Generation & Qualification",
-      description: "AI-driven capture, verification, and automated lead qualification systems.",
+      icon: MessageCircle,
+      title: "Conversational Assistants",
+      description: "Systems that respond, route, and trigger actions. Customer support and internal assistants with answers grounded in business data. Actions triggered directly from conversations.",
+    },
+    {
+      icon: Database,
+      title: "Document & Data Intelligence",
+      description: "Systems that understand and act on documents. Processing of scanned and digital documents, information extraction and validation, automated workflows triggered by content.",
+    },
+    {
+      icon: Brain,
+      title: "Predictive & Decision Support Systems",
+      description: "Intelligence that informs action before issues arise. Risk, demand, and outcome forecasting. Scoring and prioritization logic. Signals consumed by automation workflows.",
     },
   ]
 
 const solutionProcess = [
-    { step: "Understand Your Business", description: "We analyze your industry, data, challenges, and goals to identify where AI & ML can create the most impact." },
-    { step: "Design Custom Models", description: "We develop machine learning models specifically trained on your data to solve your exact problems." },
-    { step: "Integrate & Automate", description: "We seamlessly integrate AI solutions into your existing systems and workflows for immediate value." },
-    { step: "Test & Optimize", description: "Continuous testing, monitoring, and refinement to ensure peak performance and accuracy." },
-    { step: "Scale & Support", description: "As your business grows, we scale solutions and provide ongoing support to maintain competitive advantage." },
+    { step: "Identify friction and manual choke points", description: "Map where time is wasted and where human bottlenecks slow execution." },
+    { step: "Decide where rules are sufficient", description: "Start with simple logic. Add complexity only where needed." },
+    { step: "Add intelligence only where complexity demands it", description: "Deploy ML, NLP, or AI where rules can't handle the variability." },
+    { step: "Embed intelligence inside automation", description: "Build systems where intelligence triggers actions, not reports." },
+    { step: "Monitor, refine, and scale", description: "Track performance, catch drift, and expand as processes evolve." },
   ]
 
   return (
@@ -89,78 +89,129 @@ const solutionProcess = [
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-            AI & ML Solutions
+            AI & Automation Solutions
           </h1>
           <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
-            Your Data. Your Requirements. Our Solution.
+            Intelligence where it's needed. Automation where it matters.
           </p>
+        </div>
+      </section>
+
+      {/* About Section - Founder Tone */}
+      <section className="py-16 sm:py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-xl border-4 border-white/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
+              <div className="space-y-6">
+                <div>
+                  <p className="text-2xl md:text-3xl text-white/90 leading-relaxed mb-6">
+                    Most businesses don't need more "AI".
+                  </p>
+                  <p className="text-2xl md:text-3xl font-bold text-white leading-relaxed">
+                    They need less manual work and better decisions.
+                  </p>
+                </div>
+                
+                <div className="border-t border-white/30 pt-6 space-y-4">
+                  <p className="text-white/70 text-base leading-relaxed">
+                    We build systems where <span className="text-white font-semibold">intelligence handles complexity</span> and <span className="text-white font-semibold">automation handles execution</span>.
+                  </p>
+                  <p className="text-white/70 text-base leading-relaxed">
+                    Models don't live in isolation. Automation doesn't run blind.
+                  </p>
+                  <p className="text-white/70 text-base leading-relaxed">
+                    Both work together inside production systems.
+                  </p>
+                </div>
+
+                <div className="border-t border-white/30 pt-6 space-y-4">
+                  <p className="text-white/70 text-base leading-relaxed">
+                    We scope each project individually, decide what should be automated, and add intelligence only where it improves outcomes.
+                  </p>
+                  <p className="text-white/70 text-base leading-relaxed">
+                    <span className="text-white font-semibold">No templates. No forced platforms. No unnecessary complexity.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What This Means for You Section */}
+      <section className="py-16 sm:py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">What This Means for You</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-xl border-4 border-white/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-white text-lg leading-relaxed"><span className="font-semibold">No overengineering</span></p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-white text-lg leading-relaxed"><span className="font-semibold">No unnecessary AI</span></p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-white text-lg leading-relaxed"><span className="font-semibold">No rebuilding when you scale</span></p>
+                </div>
+                <div className="border-t border-white/30 pt-6 mt-6">
+                  <p className="text-white/80 text-lg leading-relaxed text-center">
+                    Every system is designed for your problem, not for a demo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Think Section */}
+      <section className="py-16 sm:py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">How We Think About Systems</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-xl border-4 border-white/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
+              <div className="space-y-6 text-center">
+                <p className="text-xl md:text-2xl text-white leading-relaxed">
+                  <span className="font-semibold">Intelligence understands.</span>
+                </p>
+                <p className="text-xl md:text-2xl text-white leading-relaxed">
+                  <span className="font-semibold">Automation executes.</span>
+                </p>
+                <p className="text-xl md:text-2xl text-white leading-relaxed">
+                  <span className="font-semibold">Systems scale</span> when both are designed together.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Three Pillars Section */}
       <section className="py-16 sm:py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Our Approach</h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Your Data */}
-            <SpotlightCard>
-              <div className="text-center">
-                <div className="mb-4 flex justify-center">
-                  <div className="p-4 rounded-full bg-blue-500/20">
-                    <Database className="w-8 h-8 text-blue-400" />
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">How We Build These Systems</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-4">
+              {solutionProcess.map((item, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-xl border-4 border-white/30 rounded-2xl p-6 shadow-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-10 w-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 text-white font-bold text-sm shadow-lg">
+                        {index + 1}
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-white mb-2">{item.step}</h3>
+                      <p className="text-white/70">{item.description}</p>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Your Data</h3>
-                <p className="text-white/70 mb-4">
-                  We understand that your data is unique. Whether it's customer interactions, transaction history, operational metrics, or behavioral patterns, we analyze and structure your existing data to unlock hidden patterns and opportunities.
-                </p>
-                <ul className="text-white/60 text-sm space-y-2 text-left">
-                  <li>✓ Data collection & integration</li>
-                  <li>✓ Quality assessment</li>
-                  <li>✓ Privacy & security compliance</li>
-                </ul>
-              </div>
-            </SpotlightCard>
-
-            {/* Your Requirements */}
-            <SpotlightCard>
-              <div className="text-center">
-                <div className="mb-4 flex justify-center">
-                  <div className="p-4 rounded-full bg-purple-500/20">
-                    <Brain className="w-8 h-8 text-purple-400" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Your Requirements</h3>
-                <p className="text-white/70 mb-4">
-                  Every business is different. We listen to your goals, challenges, and constraints. Do you need prediction? Automation? Customer insights? Lead generation? We design AI & ML solutions tailored to solve your exact problems.
-                </p>
-                <ul className="text-white/60 text-sm space-y-2 text-left">
-                  <li>✓ Business goal analysis</li>
-                  <li>✓ Use case identification</li>
-                  <li>✓ ROI & impact modeling</li>
-                </ul>
-              </div>
-            </SpotlightCard>
-
-            {/* Our Solution */}
-            <SpotlightCard>
-              <div className="text-center">
-                <div className="mb-4 flex justify-center">
-                  <div className="p-4 rounded-full bg-green-500/20">
-                    <Zap className="w-8 h-8 text-green-400" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Our Solution</h3>
-                <p className="text-white/70 mb-4">
-                  We build, deploy, and maintain AI & ML solutions that work. From predictive models to intelligent automation systems, we ensure your technology is seamlessly integrated, continuously optimized, and delivering measurable value.
-                </p>
-                <ul className="text-white/60 text-sm space-y-2 text-left">
-                  <li>✓ Model development & training</li>
-                  <li>✓ System integration</li>
-                  <li>✓ Ongoing optimization</li>
-                </ul>
-              </div>
-            </SpotlightCard>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -169,9 +220,9 @@ const solutionProcess = [
       <section className="py-16 sm:py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About Our AI & ML Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">What We Build</h2>
             <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
-              We combine advanced machine learning with practical automation to solve real business challenges. Our focus is on creating intelligent systems that integrate smoothly into your operations, learn from your data, and deliver measurable results.
+              Systems where intelligence and automation work together in production.
             </p>
           </div>
 
@@ -181,25 +232,49 @@ const solutionProcess = [
       {/* Solutions We Build */}
       <section ref={sectionRef} className="py-16 sm:py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Solutions We Build</h2>
           <div
-            className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-1000 ${
+            className={`grid md:grid-cols-2 gap-6 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
             }`}
           >
-            {automationServices.map((service, index) => (
-              <SpotlightCard key={index}>
+            {solutionsWeBuild.map((service, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-xl border-4 border-white/30 rounded-2xl p-6 shadow-2xl hover:bg-white/10 hover:border-white/40 transition-all duration-300">
                 <div className="flex flex-col items-start gap-4 h-full">
-                  <div className="p-3 rounded-lg bg-white/20">
+                  <div className="p-3 rounded-lg bg-white/20 shadow-lg">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                    <p className="text-white/70 text-sm">{service.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-white/70 text-sm leading-relaxed">{service.description}</p>
                   </div>
                 </div>
-              </SpotlightCard>
+              </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What We Don't Do Section */}
+      <section className="py-16 sm:py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">What We Don't Do</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-xl border-4 border-white/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-white/80 text-lg leading-relaxed">We don't deploy intelligence without a clear purpose.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-white/80 text-lg leading-relaxed">We don't automate broken processes.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-white/80 text-lg leading-relaxed">We don't build systems that need constant babysitting.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -207,25 +282,8 @@ const solutionProcess = [
       {/* How We Build Solutions */}
       <section className="py-16 sm:py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Our Development Process</h2>
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
-              {solutionProcess.map((item, index) => (
-                <SpotlightCard key={index}>
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-10 w-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 text-white font-bold text-sm">
-                        {index + 1}
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-white mb-2">{item.step}</h3>
-                      <p className="text-white/70">{item.description}</p>
-                    </div>
-                  </div>
-                </SpotlightCard>
-              ))}
-            </div>
+            
           </div>
         </div>
       </section>
@@ -233,13 +291,13 @@ const solutionProcess = [
       {/* CTA Section */}
       <section className="py-16 sm:py-24 px-4 mb-12">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-8 sm:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business with AI & ML?</h2>
+          <div className="text-center bg-white/5 backdrop-blur-xl border-4 border-white/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Build Intelligent Systems?</h2>
             <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-              Let's discuss your data, your requirements, and how we can build a custom AI solution that drives real results for your business.
+              Let's map your manual processes, identify where intelligence adds value, and build automation that actually works.
             </p>
-            <a href="/contact" className="inline-block bg-white text-black rounded-full px-8 py-3 text-lg font-medium hover:bg-gray-100 transition-colors">
-              Start Your AI Journey
+            <a href="/contact" className="inline-block bg-white text-black rounded-full px-8 py-3 text-lg font-medium hover:bg-gray-100 transition-colors shadow-xl">
+              Scope My Use Case
             </a>
           </div>
         </div>

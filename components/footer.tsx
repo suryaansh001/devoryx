@@ -96,7 +96,7 @@ export function Footer() {
       </div>
 
       <div className="hidden md:block mt-8 pt-6 border-t border-foreground/10 w-full">
-        <p className="text-muted-foreground text-xs text-center">Custom solutions scoped per project</p>
+        <p className="text-muted-foreground text-xs text-center">C   project</p>
       </div>
     </footer>
   )

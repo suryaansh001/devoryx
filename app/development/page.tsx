@@ -40,12 +40,12 @@ export default function DevelopmentPage() {
     {
       icon: Code,
       title: "Website Development",
-      description: "Modern, responsive websites built with clean code and best practices.",
+      description: "We build websites that work under load, age well, and don't become liabilities. No page-builder junk. No fragile animations masking bad structure. Clean code, fast performance, and a setup you won't need to rebuild in a year.",
     },
     {
       icon: Smartphone,
       title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
+      description: "Apps built for real users and real edge cases, not pitch decks. We design for stability, versioning, and growth from day one — so you're not firefighting when adoption starts.",
     },
     {
       icon: Zap,
@@ -95,6 +95,33 @@ export default function DevelopmentPage() {
               We build websites, mobile applications, and custom web systems with a focus on performance,
               maintainability, and usability. Every project is scoped clearly before execution.
             </p>
+          </div>
+
+          {/* What Breaks Products */}
+          <div className="mt-16">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">We've seen what breaks products</h3>
+                <p className="text-lg text-white/70 leading-relaxed mb-4">
+                  Rushed builds. Unclear scope. Shortcuts.
+                </p>
+                <p className="text-lg text-white/70 leading-relaxed">
+                  We avoid all three.
+                </p>
+              </div>
+              <SpotlightCard>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-white text-base leading-relaxed"><span className="font-semibold">Built to survive traffic, updates, and time.</span></p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-white text-base leading-relaxed"><span className="font-semibold">Built for users, not demos.</span></p>
+                  </div>
+                </div>
+              </SpotlightCard>
+            </div>
           </div>
         </div>
       </section>
