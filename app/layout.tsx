@@ -4,6 +4,7 @@ import "./globals.css"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Dancing_Script, Caveat } from "next/font/google"
 import { PageTransitionProvider } from "@/components/page-transition-provider"
+import { Analytics } from "@vercel/analytics/next"
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -278,6 +279,7 @@ export default function RootLayout({
           {children}
         </PageTransitionProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
