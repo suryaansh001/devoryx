@@ -154,9 +154,9 @@ export function TrainingSection() {
             <Link href="/training">
               <Button
                 size="lg"
-                className="bg-white text-black rounded-full px-8 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer"
+                className="bg-white text-black rounded-full px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-medium transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-lg group cursor-pointer"
               >
-               Explore how we turn training into performance
+               Explore Our Training
                 <ArrowRight />
               </Button>
             </Link>

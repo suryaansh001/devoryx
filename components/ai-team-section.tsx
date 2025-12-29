@@ -426,9 +426,9 @@ export function AITeamSection() {
                 <Link href="/ai-automation">
                   <Button
                     size="lg"
-                    className="bg-white text-black rounded-full px-8 py-4 text-lg font-semibold transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-xl hover:shadow-white/20 w-full border-0 group cursor-pointer"
+                    className="bg-white text-black rounded-full px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-xl hover:shadow-white/20 w-full border-0 group cursor-pointer"
                   >
-                    Explore how we turn AI into business impact
+                    Explore AI Solutions
                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
