@@ -111,6 +111,7 @@ export function TrainingPhasesScrollStack() {
         scaleEndPosition="20%"
         baseScale={0.85}
         useWindowScroll={true}
+        onStackComplete={() => {}}
       >
         {phases.map((phase, idx) => (
           <ScrollStackItem

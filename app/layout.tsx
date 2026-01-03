@@ -4,7 +4,16 @@ import "./globals.css"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Dancing_Script, Caveat } from "next/font/google"
 import { PageTransitionProvider } from "@/components/page-transition-provider"
+import { ScrollTracker } from "@/components/scroll-tracker"
 import { Analytics } from "@vercel/analytics/next"
+import { AskEreborChatbot } from "@/components/ask-erebor-chatbot"
+
+// Declare gtag for TypeScript
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, config?: Record<string, any>) => void
+  }
+}
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -278,6 +287,8 @@ export default function RootLayout({
         <PageTransitionProvider>
           {children}
         </PageTransitionProvider>
+        <ScrollTracker />
+        <AskEreborChatbot />
         <SpeedInsights />
         <Analytics />
       </body>

@@ -1,15 +1,36 @@
 "use client"
 
-import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from "react"
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState, ReactNode } from "react"
 import { motion, AnimatePresence } from "motion/react"
 
 import "./RotatingText.css"
 
-function cn(...classes) {
+function cn(...classes: (string | undefined)[]) {
   return classes.filter(Boolean).join(" ")
 }
 
-const RotatingText = forwardRef((props, ref) => {
+interface RotatingTextProps {
+  texts: string[]
+  transition?: any
+  initial?: any
+  animate?: any
+  exit?: any
+  animatePresenceMode?: string
+  animatePresenceInitial?: boolean
+  rotationInterval?: number
+  staggerDuration?: number
+  staggerFrom?: string | number
+  loop?: boolean
+  auto?: boolean
+  splitBy?: string
+  onNext?: (index: number) => void
+  mainClassName?: string
+  splitLevelClassName?: string
+  elementLevelClassName?: string
+  [key: string]: any
+}
+
+const RotatingText = forwardRef<unknown, RotatingTextProps>((props, ref) => {
   const {
     texts,
     transition = { type: "spring", damping: 25, stiffness: 300 },

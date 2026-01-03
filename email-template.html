@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Erebor - [Email Subject]</title>
+    <style>
+        /* Reset and base styles */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+        }
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background-color: #000000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #000000;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .glass-card-accent {
+            background: linear-gradient(135deg, rgba(71, 85, 105, 0.1), rgba(100, 116, 139, 0.05));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-text-accent {
+            background: linear-gradient(135deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .btn-primary {
+            background: linear-gradient(to right, #ffffff, #f1f5f9);
+            color: #0f172a !important;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(to right, #f8fafc, #f1f5f9);
+            transform: scale(1.05);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-block;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        .btn-accent {
+            background: linear-gradient(135deg, #60a5fa, #a855f7);
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(96, 165, 250, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px -5px rgba(96, 165, 250, 0.4);
+        }
+        .text-white {
+            color: #ffffff !important;
+        }
+        .text-white-secondary {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        .text-blue {
+            color: #60a5fa !important;
+        }
+        .text-cyan {
+            color: #22d3ee !important;
+        }
+        .text-purple {
+            color: #a855f7 !important;
+        }
+        .bg-slate-overlay {
+            background: linear-gradient(135deg, rgba(71, 85, 105, 0.1), rgba(100, 116, 139, 0.05));
+        }
+        .border-slate {
+            border-color: rgba(71, 85, 105, 0.3) !important;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .px-8 {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+        .py-12 {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+        .mb-6 {
+            margin-bottom: 24px;
+        }
+        .mb-8 {
+            margin-bottom: 32px;
+        }
+        .space-y-4 > * + * {
+            margin-top: 16px;
+        }
+        .rounded-3xl {
+            border-radius: 24px;
+        }
+        .font-light {
+            font-weight: 300;
+        }
+        .font-medium {
+            font-weight: 500;
+        }
+        .font-semibold {
+            font-weight: 600;
+        }
+        .text-2xl {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .text-lg {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        .text-base {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .text-sm {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .leading-relaxed {
+            line-height: 1.625;
+        }
+        .leading-tight {
+            line-height: 1.25;
+        }
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+            .px-8 {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+            .py-12 {
+                padding-top: 32px !important;
+                padding-bottom: 32px !important;
+            }
+            .text-2xl {
+                font-size: 20px !important;
+                line-height: 28px !important;
+            }
+            .text-lg {
+                font-size: 16px !important;
+                line-height: 24px !important;
+            }
+            .btn-primary {
+                padding: 12px 24px !important;
+                font-size: 14px !important;
+            }
+            .btn-secondary {
+                padding: 10px 20px !important;
+                font-size: 13px !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    <!-- Main Container -->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#000000">
+        <tr>
+            <td align="center">
+                <table class="container" role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; margin: 0 auto; background-color: #000000;">
+
+                    <!-- Header Section -->
+                    <tr>
+                        <td class="px-8 py-12">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="text-center mb-8">
+                                        <!-- Logo Placeholder -->
+                                        <img src="[LOGO_IMAGE_URL]" alt="Erebor" width="120" height="120" style="width: 120px; height: 120px; border-radius: 12px; display: block; margin: 0 auto 32px auto;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center mb-6">
+                                        <h1 class="text-2xl font-semibold text-white" style="font-size: 24px; line-height: 32px; font-weight: 600; color: #ffffff; margin: 0 0 24px 0;">
+                                            [EMAIL_SUBJECT_LINE]
+                                        </h1>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Main Content Card -->
+                    <tr>
+                        <td class="px-8">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="glass-card-accent rounded-3xl" style="background: linear-gradient(135deg, rgba(71, 85, 105, 0.1), rgba(100, 116, 139, 0.05)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; overflow: hidden; position: relative;">
+                                        <!-- Subtle accent border -->
+                                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #60a5fa, #a855f7, #22d3ee);"></div>
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td class="px-8 py-12">
+                                                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                        <!-- Hero Text -->
+                                                        <tr>
+                                                            <td class="text-center mb-6">
+                                                                <h2 class="text-2xl font-light text-white" style="font-size: 24px; line-height: 32px; font-weight: 300; color: #ffffff; margin: 0 0 16px 0;">
+                                                                    [MAIN_HEADING]
+                                                                    <span class="font-medium gradient-text" style="font-weight: 500; background: linear-gradient(to right, #ffffff, #e2e8f0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                                                                        [GRADIENT_TEXT_PORTION]
+                                                                    </span>
+                                                                </h2>
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Subheading -->
+                                                        <tr>
+                                                            <td class="text-center mb-8">
+                                                                <p class="text-lg text-white-secondary leading-relaxed" style="font-size: 18px; line-height: 28px; color: rgba(255, 255, 255, 0.7); margin: 0 0 32px 0; max-width: 480px; margin-left: auto; margin-right: auto;">
+                                                                    [SUBHEADING_TEXT]
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Main Content -->
+                                                        <tr>
+                                                            <td class="mb-8">
+                                                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p class="text-base text-white-secondary leading-relaxed" style="font-size: 16px; line-height: 24px; color: rgba(255, 255, 255, 0.7); margin: 0 0 16px 0;">
+                                                                                [MAIN_CONTENT_PARAGRAPH_1]
+                                                                            </p>
+                                                                            <p class="text-base text-white-secondary leading-relaxed" style="font-size: 16px; line-height: 24px; color: rgba(255, 255, 255, 0.7); margin: 0 0 16px 0;">
+                                                                                [MAIN_CONTENT_PARAGRAPH_2]
+                                                                            </p>
+                                                                            <p class="text-base text-white-secondary leading-relaxed" style="font-size: 16px; line-height: 24px; color: rgba(255, 255, 255, 0.7); margin: 0;">
+                                                                                [MAIN_CONTENT_PARAGRAPH_3]
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Feature Highlight Box -->
+                                                        <tr>
+                                                            <td class="mb-8">
+                                                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                                    <tr>
+                                                                        <td class="glass-card rounded-3xl" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(8px); border: 1px solid rgba(96, 165, 250, 0.2); border-radius: 16px; padding: 20px;">
+                                                                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                                                <tr>
+                                                                                    <td style="text-align: center;">
+                                                                                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #60a5fa, #a855f7); border-radius: 50%; margin: 0 auto 12px auto; display: flex; align-items: center; justify-content: center;">
+                                                                                            <span style="color: #ffffff; font-size: 20px; font-weight: bold;">✨</span>
+                                                                                        </div>
+                                                                                        <p class="text-sm text-cyan" style="font-size: 14px; line-height: 20px; color: #22d3ee; margin: 0; font-weight: 500;">
+                                                                                            [FEATURE_HIGHLIGHT_TEXT]
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Image Placeholder -->
+                                                        <tr>
+                                                            <td class="text-center mb-8">
+                                                                <img src="[CONTENT_IMAGE_URL]" alt="[IMAGE_ALT_TEXT]" width="100%" height="auto" style="width: 100%; height: auto; max-width: 480px; border-radius: 12px; display: block; margin: 0 auto 32px auto; box-shadow: 0 10px 40px -10px rgba(96, 165, 250, 0.3);">
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Call to Action Buttons -->
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                                    <tr>
+                                                                        <td class="text-center space-y-4" style="text-align: center;">
+                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                                                                                <tr>
+                                                                                    <td style="padding: 0 8px 16px 8px;">
+                                                                                        <a href="[PRIMARY_BUTTON_URL]" class="btn-primary" style="background: linear-gradient(to right, #ffffff, #f1f5f9); color: #0f172a !important; text-decoration: none; padding: 16px 32px; border-radius: 9999px; font-weight: 600; font-size: 16px; display: inline-block; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); transition: all 0.3s ease;">
+                                                                                            [PRIMARY_BUTTON_TEXT]
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="padding: 0 8px 16px 8px;">
+                                                                                        <a href="[SECONDARY_BUTTON_URL]" class="btn-accent" style="background: linear-gradient(135deg, #60a5fa, #a855f7); color: #ffffff !important; text-decoration: none; padding: 12px 24px; border-radius: 9999px; font-weight: 500; font-size: 14px; display: inline-block; text-align: center; box-shadow: 0 10px 25px -5px rgba(96, 165, 250, 0.3); transition: all 0.3s ease;">
+                                                                                            [SECONDARY_BUTTON_TEXT]
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="padding: 0 8px;">
+                                                                                        <a href="[TERTIARY_BUTTON_URL]" class="btn-secondary" style="background: rgba(255, 255, 255, 0.1); color: #ffffff !important; text-decoration: none; padding: 12px 24px; border-radius: 9999px; font-weight: 500; font-size: 14px; display: inline-block; text-align: center; border: 1px solid rgba(255, 255, 255, 0.4); transition: all 0.3s ease;">
+                                                                                            [TERTIARY_BUTTON_TEXT]
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer Section -->
+                    <tr>
+                        <td class="px-8 py-12">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="text-center">
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td class="text-center mb-6">
+                                                    <p class="text-sm text-white-secondary" style="font-size: 14px; line-height: 20px; color: rgba(255, 255, 255, 0.7); margin: 0 0 24px 0;">
+                                                        [FOOTER_TEXT]
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                                                        <tr>
+                                                            <td style="padding: 0 12px;">
+                                                                <a href="[WEBSITE_URL]" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 14px;">Website</a>
+                                                            </td>
+                                                            <td style="padding: 0 12px; color: rgba(255, 255, 255, 0.7); font-size: 14px;">|</td>
+                                                            <td style="padding: 0 12px;">
+                                                                <a href="[UNSUBSCRIBE_URL]" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 14px;">Unsubscribe</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

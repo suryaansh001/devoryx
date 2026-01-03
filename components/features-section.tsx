@@ -437,10 +437,11 @@ export function FeaturesSection() {
   }, [])
 
   return (
-    <section id="features" ref={sectionRef} className="relative z-10 py-16 sm:py-24 px-4">
+    <section id="services" data-section="features" ref={sectionRef} className="relative z-10 py-16 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Main Card Container */}
         <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-8 sm:p-12 md:p-16">
+          {/* Header Section */}
           <div
             className={`text-center mb-12 sm:mb-20 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -464,6 +465,7 @@ export function FeaturesSection() {
             </p>
           </div>
 
+          {/* Features Grid - Flattened structure */}
           <div
             className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
@@ -473,7 +475,7 @@ export function FeaturesSection() {
               <Link
                 key={index}
                 href={feature.href}
-                className={`group transition-all duration-1000`}
+                className="group transition-all duration-300 hover:no-underline"
                 style={{
                   transitionDelay: isVisible ? `${300 + index * 100}ms` : "0ms",
                 }}
@@ -481,7 +483,7 @@ export function FeaturesSection() {
                 onMouseLeave={() => setActiveDemo(null)}
               >
                 <SpotlightCard className="rounded-2xl p-6 sm:p-8 h-full cursor-pointer transition-all duration-300 border-2 border-white group-hover:border-white/80">
-                  <div className="mb-6">
+                  <div className="mb-6 will-change-auto">
                     <feature.demo isActive={activeDemo === index || isVisible} />
                   </div>
 
@@ -495,9 +497,9 @@ export function FeaturesSection() {
             ))}
           </div>
 
-          {/* CTA Section */}
-          <div className="mt-16 text-center">
-            <div className="inline-block rounded-2xl border border-white/20 bg-gradient-to-r from-blue-500/10 to-purple-600/10 p-8 backdrop-blur-sm">
+          {/* CTA Section - Simplified structure */}
+          <div className="mt-16 flex flex-col items-center">
+            <div className="rounded-2xl border border-white/20 bg-gradient-to-r from-blue-500/10 to-purple-600/10 p-8 backdrop-blur-sm text-center">
               <h3 className="text-2xl font-bold text-white mb-3">Explore Our Full Range of Services</h3>
               <p className="text-white/70 mb-6 max-w-2xl">
                 Each service is scoped clearly and tailored to your specific business requirements.

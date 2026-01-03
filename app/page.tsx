@@ -1,13 +1,45 @@
+import dynamic from "next/dynamic"
 import { GlassmorphismNav } from "@/components/glassmorphism-nav"
 import { HeroSection } from "@/components/hero-section"
-import { ProblemSolutionSection } from "@/components/problem-solution-section"
+import { AboveFoldCTA } from "@/components/above-fold-cta"
+import { FAQSection } from "@/components/faq-section"
 import Aurora from "@/components/Aurora"
-import { FeaturesSection } from "@/components/features-section"
-import { AITeamSection } from "@/components/ai-team-section"
-import { TrainingSection } from "@/components/training-section"
-import { TechStackShowcase } from "@/components/tech-stack-showcase"
-import { CTASection } from "@/components/cta-section"
-import { Footer } from "@/components/footer"
+
+// Dynamic imports for non-critical sections (lazy load, no SSR for heavy components)
+const ProblemSolutionSection = dynamic(
+  () => import("@/components/problem-solution-section").then(mod => ({ default: mod.ProblemSolutionSection })),
+  { ssr: false, loading: () => <div className="h-96" /> }
+)
+
+const FeaturesSection = dynamic(
+  () => import("@/components/features-section").then(mod => ({ default: mod.FeaturesSection })),
+  { ssr: false, loading: () => <div className="h-96" /> }
+)
+
+const AITeamSection = dynamic(
+  () => import("@/components/ai-team-section").then(mod => ({ default: mod.AITeamSection })),
+  { ssr: false, loading: () => <div className="h-96" /> }
+)
+
+const TrainingSection = dynamic(
+  () => import("@/components/training-section").then(mod => ({ default: mod.TrainingSection })),
+  { ssr: false, loading: () => <div className="h-96" /> }
+)
+
+const TechStackShowcase = dynamic(
+  () => import("@/components/tech-stack-showcase").then(mod => ({ default: mod.TechStackShowcase })),
+  { ssr: false, loading: () => <div className="h-40" /> }
+)
+
+const CTASection = dynamic(
+  () => import("@/components/cta-section").then(mod => ({ default: mod.CTASection })),
+  { ssr: false, loading: () => <div className="h-80" /> }
+)
+
+const Footer = dynamic(
+  () => import("@/components/footer").then(mod => ({ default: mod.Footer })),
+  { ssr: false, loading: () => <div className="h-40" /> }
+)
 
 // JSON-LD for home page specific data
 const homePageJsonLd = {
@@ -44,7 +76,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageJsonLd) }}
       />
       <main className="min-h-screen relative overflow-hidden">
-        <div className="fixed inset-0 w-full h-full">
+        <div className="fixed inset-0 w-full h-full pointer-events-none">
           <Aurora colorStops={["#475569", "#64748b", "#475569"]} amplitude={1.2} blend={0.6} speed={0.8} />
         </div>
         <div className="relative z-10">
@@ -56,9 +88,14 @@ export default function HomePage() {
           <TrainingSection />
           <TechStackShowcase />
           <CTASection />
+          <FAQSection />
           <Footer />
         </div>
+        {/* Space for fixed CTA bar */}
+        <div className="h-20" />
       </main>
+      {/* Above-fold CTA Bar */}
+      <AboveFoldCTA />
     </div>
   )
 }
