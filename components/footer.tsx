@@ -2,8 +2,9 @@
 import type React from "react"
 import type { ComponentProps, ReactNode } from "react"
 import { motion, useReducedMotion } from "framer-motion"
-import { InstagramIcon, LinkedinIcon } from "lucide-react"
+import { InstagramIcon, LinkedinIcon, ArrowRight, Phone } from "lucide-react"
 import Image from "next/image"
+import { TransitionLink } from "./transition-link"
 
 interface FooterLink {
   title: string
@@ -89,6 +90,21 @@ export function Footer() {
             </div>
           </AnimatedContainer>
         ))}
+      </div>
+
+      <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <TransitionLink href="/services">
+          <button className="group relative flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-white text-black rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 hover:shadow-lg hover:shadow-white/20 active:scale-95">
+            View Services
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-0.5 transition-transform" />
+          </button>
+        </TransitionLink>
+        <TransitionLink href="/contact">
+          <button className="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 border border-white/40 text-white rounded-lg font-semibold text-sm sm:text-base hover:border-white/60 hover:bg-white/5 transition-all duration-300 active:scale-95">
+            <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+            Book Call
+          </button>
+        </TransitionLink>
       </div>
 
       <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-foreground/10 w-full">

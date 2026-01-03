@@ -43,27 +43,13 @@ export function AboveFoldCTA() {
           <button
             onClick={() => {
               trackCTAClick("book_call", "above_fold")
-              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+              window.location.href = '/contact'
             }}
             className="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 border border-white/40 text-white rounded-lg font-semibold text-sm sm:text-base hover:border-white/60 hover:bg-white/5 transition-all duration-300 active:scale-95 will-change-transform"
           >
             <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="hidden xs:inline">Book a Call</span>
-            <span className="xs:hidden">Call</span>
-          </button>
-
-          {/* Tertiary CTA */}
-          <button
-            onClick={() => {
-              trackCTAClick("see_use_cases", "above_fold")
-              // Scroll to features section or create dedicated use cases
-              document.querySelector('[data-section="features"]')?.scrollIntoView({ behavior: "smooth" })
-            }}
-            className="flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-white/80 hover:text-white rounded-lg font-semibold text-sm sm:text-base transition-colors duration-300"
-          >
-            <Zap className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="hidden sm:inline">Use Cases</span>
-            <span className="sm:hidden">Cases</span>
+            <span className="hidden xs:inline">Get in Touch</span>
+            <span className="xs:hidden">Contact</span>
           </button>
         </div>
       </div>

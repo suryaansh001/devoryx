@@ -69,7 +69,7 @@ export function HeroSection() {
             <br className="sm:hidden" />
             <br />
             Built with 
-            <span className="ml-2 sm:ml-3 px-4 sm:px-6 py-2 bg-white text-black rounded-lg inline-block font-bold text-xl sm:text-3xl md:text-4xl">
+            <span className="ml-2 sm:ml-3 px-4 sm:px-6 py-2 bg-white text-black rounded-lg inline-block font-bold">
               <RotatingText 
                 texts={["Clarity", "Precision", "Excellence"]} 
                 rotationInterval={3000}

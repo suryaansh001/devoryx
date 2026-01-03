@@ -491,7 +491,14 @@ export function FeaturesSection() {
                     {feature.title}
                   </h3>
 
-                  <p className="text-gray-200 text-sm sm:text-base leading-relaxed">{feature.description}</p>
+                  <p className="text-gray-200 text-sm sm:text-base leading-relaxed mb-4">{feature.description}</p>
+
+                  <button className="bg-white text-black px-4 py-2 rounded-lg flex items-center gap-2 font-semibold hover:bg-gray-100 transition-colors">
+                    Learn More
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </SpotlightCard>
               </Link>
             ))}
